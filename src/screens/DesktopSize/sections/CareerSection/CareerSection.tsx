@@ -4,22 +4,22 @@ import { Card, CardContent } from "../../../../components/ui/card";
 
 export const CareerSection = (): JSX.Element => {
   return (
-    <section className="w-full py-16">
+    <section className="w-full py-8 md:py-16 px-4 md:px-6">
       <Card className="relative w-full bg-bluelight rounded-[20px] overflow-hidden">
-        <CardContent className="flex flex-row p-0">
-          <div className="flex flex-col py-[100px] pl-[148px] pr-44 relative z-10">
-            <div className="max-w-[701px]">
-              <h3 className="font-h3 font-[number:var(--h3-font-weight)] text-white text-[length:var(--h3-font-size)] tracking-[var(--h3-letter-spacing)] leading-[var(--h3-line-height)] mb-10 [font-style:var(--h3-font-style)]">
+        <CardContent className="flex flex-col md:flex-row p-0">
+          <div className="flex flex-col py-8 md:py-[100px] px-6 md:pl-[148px] md:pr-44 relative z-10">
+            <div className="max-w-full md:max-w-[701px]">
+              <h3 className="font-h3 text-2xl md:text-[42px] text-white leading-[140%] mb-6 md:mb-10">
                 Мечаешь о карьере в IT?
               </h3>
 
-              <p className="w-full font-normal text-white text-xl leading-[30px] mb-10 [font-family:'PT_Sans',Helvetica] tracking-[0]">
+              <p className="text-white text-base md:text-xl leading-relaxed mb-6 md:mb-10">
                 <span>
                   Хочешь получить реальный опыт работы, который выделит тебя
                   среди других выпускников?{" "}
                 </span>
 
-                <span className="font-[number:var(--t2-font-weight)] leading-[var(--t2-line-height)] font-t2 [font-style:var(--t2-font-style)] tracking-[var(--t2-letter-spacing)] text-[length:var(--t2-font-size)]">
+                <span className="font-t2">
                   Департамент информатизации и связи приглашает тебя на
                   стажировку!
                 </span>
@@ -32,8 +32,8 @@ export const CareerSection = (): JSX.Element => {
                 </span>
               </p>
 
-              <Button className="rounded-[30px] bg-white text-bluedark hover:bg-white/90 px-[37px] py-[15px] h-[50px]">
-                <span className="font-[number:var(--t3-bold-font-weight)] text-[length:var(--t3-bold-font-size)] leading-[var(--t3-bold-line-height)] font-t3-bold tracking-[var(--t3-bold-letter-spacing)] [font-style:var(--t3-bold-font-style)]">
+              <Button className="w-full md:w-auto rounded-[30px] bg-white text-bluedark hover:bg-white/90 px-6 md:px-[37px] py-[15px] h-[50px]">
+                <span className="font-t3-bold">
                   Подать заявку
                 </span>
               </Button>
@@ -41,7 +41,7 @@ export const CareerSection = (): JSX.Element => {
           </div>
 
           <img
-            className="absolute right-0 top-[-60px] w-[631px] h-[566px]"
+            className="w-full md:w-[631px] h-auto md:h-[566px] md:absolute md:right-0 md:top-[-60px] object-contain"
             alt="Img business cat"
             src="/imgbusinesscat.png"
           />
