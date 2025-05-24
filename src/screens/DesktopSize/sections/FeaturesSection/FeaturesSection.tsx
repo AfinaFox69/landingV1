@@ -3,6 +3,8 @@ import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 
 export const FeaturesSection = (): JSX.Element => {
+  const [activeFeatureIndex, setActiveFeatureIndex] = React.useState(0);
+
   // Feature data for mapping
   const features = [
     { id: 1, name: "Двуязычность", isActive: true },
@@ -30,44 +32,49 @@ export const FeaturesSection = (): JSX.Element => {
   };
 
   return (
-    <section className="flex flex-col w-full items-center gap-[62px] py-10">
-      <h2 className="[font-family:'PT_Sans_Caption',Helvetica] font-bold text-dark text-[42px] text-center tracking-[0] leading-[58.8px]">
+    <section className="flex flex-col w-full items-center gap-8 md:gap-[62px] py-8 md:py-10 px-4 md:px-6">
+      <h2 className="font-h3 text-2xl md:text-[42px] text-dark text-center leading-[140%]">
         Реализованные фичи
       </h2>
 
-      <div className="flex flex-col items-start gap-[52px] w-full">
-        <div className="flex flex-wrap items-start gap-3">
-          {features.map((feature) => (
+      <div className="flex flex-col items-start gap-6 md:gap-[52px] w-full">
+        {/* Feature buttons */}
+        <div className="flex flex-wrap justify-center md:justify-start gap-2 md:gap-3 w-full">
+          {features.map((feature, index) => (
             <Button
               key={feature.id}
-              variant={feature.isActive ? "default" : "outline"}
-              className={`rounded-[54.5px] px-4 py-2 h-auto ${
-                feature.isActive
+              variant={index === activeFeatureIndex ? "default" : "outline"}
+              className={`rounded-[54.5px] px-3 md:px-4 py-2 h-auto text-sm md:text-base ${
+                index === activeFeatureIndex
                   ? "bg-bluedark hover:bg-bluedark"
                   : "border-black border-opacity-70 text-black opacity-70 hover:opacity-100"
               }`}
+              onClick={() => setActiveFeatureIndex(index)}
             >
-              <span className="[font-family:'PT_Sans',Helvetica] font-normal text-base tracking-[0] leading-4">
+              <span className="font-normal leading-4">
                 {feature.name}
               </span>
             </Button>
           ))}
         </div>
 
-        <div className="flex flex-col items-start gap-[72px] w-full">
-          <div className="flex flex-col md:flex-row items-start gap-10 w-full">
-            <Card className="w-full md:w-[847px] h-[540px] bg-[#f5f8fb] rounded-[20px] border-none">
+        {/* Feature content */}
+        <div className="flex flex-col items-start gap-8 md:gap-[72px] w-full">
+          <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10 w-full">
+            {/* Feature preview */}
+            <Card className="w-full md:w-[847px] h-[300px] md:h-[540px] bg-[#f5f8fb] rounded-[20px] border-none">
               <CardContent className="p-0 h-full">
                 {/* Image or content placeholder */}
               </CardContent>
             </Card>
 
-            <div className="flex flex-col w-full md:w-[700px] items-start gap-[52px]">
-              <h3 className="font-h4 font-[number:var(--h4-font-weight)] text-dark text-[length:var(--h4-font-size)] tracking-[var(--h4-letter-spacing)] leading-[var(--h4-line-height)] [font-style:var(--h4-font-style)]">
+            {/* Feature description */}
+            <div className="flex flex-col w-full md:w-[700px] items-start gap-6 md:gap-[52px]">
+              <h3 className="font-h4 text-xl md:text-[32px] text-dark leading-[140%]">
                 {featureContent.title}
               </h3>
 
-              <div className="w-full font-t2 font-[number:var(--t2-font-weight)] text-dark text-[length:var(--t2-font-size)] tracking-[var(--t2-letter-spacing)] leading-[var(--t2-line-height)] [font-style:var(--t2-font-style)]">
+              <div className="font-t2 text-base md:text-[20px] text-dark leading-[150%]">
                 {featureContent.description.map((line, index) => (
                   <React.Fragment key={index}>
                     {line}
