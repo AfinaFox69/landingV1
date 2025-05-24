@@ -15,12 +15,12 @@ export const FooterSection = (): JSX.Element => {
   ];
 
   return (
-    <footer className="w-full py-16 px-24">
-      <div className="flex flex-wrap justify-between gap-12 max-w-[1734px] mx-auto">
+    <footer className="w-full py-8 md:py-16 px-4 md:px-24">
+      <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-12 max-w-[1734px] mx-auto">
         {/* Left Column */}
-        <div className="flex flex-col justify-between h-[266px]">
+        <div className="flex flex-col gap-8 md:gap-0 md:justify-between md:h-[266px]">
           {/* Logos */}
-          <div className="flex flex-wrap gap-20">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-20">
             {/* First Logo */}
             <div className="relative w-[268px] h-[54px]">
               <img
@@ -28,69 +28,58 @@ export const FooterSection = (): JSX.Element => {
                 alt="Vector"
                 src="/vector.svg"
               />
-
               <div className="absolute w-[41px] h-[54px] top-px left-[227px]">
                 <img
                   className="absolute w-8 h-[38px] top-1.5 left-0"
                   alt="Vector"
                   src="/vector-11.svg"
                 />
-
                 <img
                   className="absolute w-[21px] h-[54px] top-0 left-5"
                   alt="Vector"
                   src="/vector-13.svg"
                 />
-
                 <img
                   className="absolute w-[25px] h-[23px] top-[30px] left-[9px]"
                   alt="Vector"
                   src="/vector-7.svg"
                 />
-
                 <img
                   className="absolute w-[11px] h-[37px] top-4 left-0"
                   alt="Vector"
                   src="/vector-5.svg"
                 />
-
                 <img
                   className="absolute w-5 h-[7px] top-4 left-[21px]"
                   alt="Vector"
                   src="/vector-2.svg"
                 />
-
                 <img
                   className="absolute w-[11px] h-[11px] top-0 left-0"
                   alt="Vector"
                   src="/vector-4.svg"
                 />
               </div>
-
               <img
                 className="absolute w-[103px] h-[53px] top-0.5 left-0"
                 alt="Group"
                 src="/group.png"
               />
-
               <img
                 className="absolute w-7 h-[54px] top-px left-[107px]"
                 alt="Vector"
                 src="/vector-10.svg"
               />
-
               <img
                 className="absolute w-6 h-[37px] top-4 left-[141px]"
                 alt="Vector"
                 src="/vector-12.svg"
               />
-
               <img
                 className="absolute w-[31px] h-[38px] top-4 left-[190px]"
                 alt="Vector"
                 src="/vector-6.svg"
               />
-
               <img
                 className="absolute w-[11px] h-[11px] top-px left-[171px]"
                 alt="Vector"
@@ -106,28 +95,24 @@ export const FooterSection = (): JSX.Element => {
                   alt="Group"
                   src="/group-1.png"
                 />
-
                 <img
                   className="absolute w-[63px] h-[63px] top-0 left-0"
                   alt="Group"
                   src="/group-2.png"
                 />
               </div>
-
               <div className="absolute w-[57px] h-[68px] top-0 left-0 bg-[url(/vector-9.svg)] bg-[100%_100%]">
                 <img
                   className="absolute w-4 h-1 top-14 left-5"
                   alt="Group"
                   src="/group-3.png"
                 />
-
                 <img
                   className="absolute w-[49px] h-[47px] top-1.5 left-1"
                   alt="Group"
                   src="/group-4.png"
                 />
               </div>
-
               <img
                 className="absolute w-px h-[66px] top-px left-[79px]"
                 alt="Vector"
@@ -137,36 +122,38 @@ export const FooterSection = (): JSX.Element => {
           </div>
 
           {/* Copyright */}
-          <p className="font-t3 text-gray">
+          <p className="font-t3 text-gray text-sm md:text-base">
             © 2025 Казанский федеральный университет, все права защищены
           </p>
         </div>
 
         {/* Right Column */}
-        <div className="flex flex-col justify-between h-[267px]">
-          <div className="flex flex-col gap-[52px]">
-            <h4 className="font-h4 text-dark">Связаться с нами</h4>
+        <div className="flex flex-col gap-8 md:gap-0 md:justify-between md:h-[267px]">
+          <div className="flex flex-col gap-6 md:gap-[52px]">
+            <h4 className="font-h4 text-xl md:text-[32px] text-dark">
+              Связаться с нами
+            </h4>
 
-            <div className="flex flex-wrap gap-[133px]">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-[133px]">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex flex-col gap-3">
                   {info.email && (
-                    <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-xl leading-[30px]">
+                    <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
                       {info.email}
                     </p>
                   )}
                   {info.phone && (
-                    <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-xl leading-[30px]">
+                    <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
                       {info.phone}
                     </p>
                   )}
                   {info.address && (
-                    <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-xl leading-[30px]">
+                    <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
                       {info.address}
                     </p>
                   )}
                   {info.hours && (
-                    <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-xl leading-[30px]">
+                    <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
                       {info.hours}
                     </p>
                   )}
@@ -175,13 +162,12 @@ export const FooterSection = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-[74px] h-[22px]">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-[74px]">
             {legalLinks.map((link, index) => (
               <a
                 key={index}
                 href="#"
-                className="font-t3 text-gray whitespace-nowrap"
-                style={{ width: link.width }}
+                className="font-t3 text-gray text-sm md:text-base hover:text-bluebright transition-colors"
               >
                 {link.text}
               </a>
