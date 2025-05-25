@@ -48,13 +48,13 @@ export const DesktopSize = (): JSX.Element => {
     <div className="bg-white flex flex-col items-center w-full">
       <header className="w-full fixed top-0 z-50 bg-dark">
         <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-          <div className="relative w-[177.02px] h-10">
+          <div className="flex items-center h-10">
             <img
-              className="w-[33px] h-10"
+              className="h-full w-auto"
               alt="Vector"
               src="/vector-14.svg"
             />
-            <div className="ml-[45px] w-[132px] h-[35px] bg-[url(/group-8.png)] bg-[100%_100%]" />
+            <div className="ml-3 h-[35px] w-[132px] bg-[url(/group-8.png)] bg-contain bg-no-repeat bg-center" />
           </div>
 
           {/* Мобильное меню */}
