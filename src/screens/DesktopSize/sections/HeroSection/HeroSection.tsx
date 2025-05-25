@@ -41,7 +41,7 @@ export const HeroSection = (): JSX.Element => {
       {/* Hero content */}
       <div className="relative w-full h-full">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row min-h-screen items-center justify-center">
+          <div className="flex flex-col lg:flex-row min-h-screen items-center justify-center bg-[url(/blur-gradient-1.svg)]">
             {/* Left side - Text content */}
             <div className="flex flex-col items-start gap-8 lg:gap-[52px] py-20 lg:py-0 text-center lg:text-left w-full lg:w-1/2">
               <div className="flex flex-col items-center lg:items-start gap-8">
