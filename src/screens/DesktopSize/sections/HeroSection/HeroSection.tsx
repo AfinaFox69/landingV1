@@ -11,16 +11,7 @@ export const HeroSection = (): JSX.Element => {
     <section className="relative w-full min-h-screen overflow-hidden bg-dark">
       {/* Background elements */}
       <div className="relative h-full w-full">
-        <img
-          className="w-full h-full object-cover"
-          alt="Bg noisy gradients"
-          src="/bg-noisy-gradients.png"
-        />
-        <img
-          className="w-full md:w-[676px] h-auto md:h-[660px] top-80 right-0"
-          alt="Blur gradient"
-          src="/blur-gradient-4.svg"
-        />
+       
         <img
           className="w-full md:w-[510px] h-auto md:h-[563px] top-[141px] right-0"
           alt="Blur gradient"
