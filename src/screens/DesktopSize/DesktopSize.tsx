@@ -16,6 +16,7 @@ import { MissionSection } from "./sections/MissionSection/MissionSection";
 import { RoadmapSection } from "./sections/RoadmapSection/RoadmapSection";
 import { RolesSection } from "./sections/RolesSection";
 import { StatisticsSection } from "./sections/StatisticsSection/StatisticsSection";
+import { X } from "lucide-react";
 
 export const DesktopSize = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -30,9 +31,22 @@ export const DesktopSize = (): JSX.Element => {
     { label: "Контакты", href: "#contacts" },
   ];
 
+  React.useEffect(() => {
+    // Блокируем скролл при открытом меню
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
   return (
     <div className="bg-white flex flex-col items-center w-full">
-      <header className="w-full fixed top-0 z-50 bg-transparent">
+      <header className="w-full fixed top-0 z-50 bg-dark">
         <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
           <div className="relative w-[177.02px] h-10">
             <img
@@ -45,23 +59,28 @@ export const DesktopSize = (): JSX.Element => {
 
           {/* Мобильное меню */}
           <button 
-            className="lg:hidden text-white"
+            className="lg:hidden text-white p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Закрыть меню" : "Открыть меню"}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            )}
           </button>
 
-          <div className={`lg:flex items-center gap-8 ${isMenuOpen ? 'flex flex-col absolute top-full left-0 right-0 bg-dark p-4' : 'hidden'}`}>
+          {/* Десктопное меню */}
+          <div className="hidden lg:flex items-center gap-8">
             <NavigationMenu>
-              <NavigationMenuList className="flex flex-col lg:flex-row gap-4 lg:gap-[52px]">
+              <NavigationMenuList className="flex gap-[52px]">
                 {navItems.map((item, index) => (
                   <NavigationMenuItem key={index}>
                     <NavigationMenuLink
                       href={item.href}
                       className="font-t2 text-white text-xl leading-5"
-                      onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
                     </NavigationMenuLink>
@@ -70,9 +89,42 @@ export const DesktopSize = (): JSX.Element => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Button className="px-[38px] py-[15px] h-[50px] bg-bluebright rounded-[30px] font-t3-bold text-white w-full lg:w-auto">
+            <Button className="px-[38px] py-[15px] h-[50px] bg-bluebright rounded-[30px] font-t3-bold text-white">
               Протестировать
             </Button>
+          </div>
+
+          {/* Мобильное полноэкранное меню */}
+          <div 
+            className={`fixed inset-0 bg-dark transition-transform duration-300 ease-in-out ${
+              isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            } lg:hidden`}
+            style={{ top: '72px' }}
+          >
+            <div className="flex flex-col h-full px-6 py-8">
+              <nav className="flex-1">
+                <ul className="space-y-6">
+                  {navItems.map((item, index) => (
+                    <li key={index}>
+                      <a
+                        href={item.href}
+                        className="text-white text-3xl font-t2 block py-2"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              
+              <Button 
+                className="w-full px-[38px] py-[15px] h-[50px] bg-bluebright rounded-[30px] font-t3-bold text-white mt-8"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Протестировать
+              </Button>
+            </div>
           </div>
         </div>
       </header>
