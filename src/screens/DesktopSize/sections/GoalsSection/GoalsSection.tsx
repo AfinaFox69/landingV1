@@ -2,6 +2,7 @@ import { FlameIcon } from "lucide-react";
 import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 
+// Data for the goals cards
 const goalsData = [
   {
     id: 1,
@@ -35,44 +36,42 @@ const goalsData = [
 
 export const GoalsSection = (): JSX.Element => {
   return (
-    <section className="bg-graybluelightbg rounded-[50px_50px_0px_0px] overflow-hidden py-10 md:py-[140px]">
-      <div className="container mx-auto px-4 md:px-6">
-        <h2 className="font-h3 text-dark text-[42px] font-bold text-center leading-[58.8px] mb-[52px]">
-          Задачи
-        </h2>
+    <section className="flex flex-col items-center gap-[52px] px-[92px] py-[140px] bg-graybluelightbg rounded-[50px_50px_0px_0px] overflow-hidden">
+      <h2 className="font-h3 text-dark text-[42px] font-bold text-center leading-[58.8px]">
+        Задачи
+      </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-10">
-          {goalsData.map((goal) => (
-            <Card
-              key={goal.id}
-              className="w-full rounded-[50px] overflow-hidden shadow-light-shadow"
-            >
-              <CardContent className="flex flex-col items-start gap-[52px] p-0 pt-[52px] px-6 md:px-[45px]">
-                <div className="relative w-[60px] h-[60px]">
-                  {goal.iconType === "flame" ? (
-                    <FlameIcon className="w-[50px] h-[50px]" />
-                  ) : (
-                    <img
-                      className="absolute w-[50px] h-[50px] top-[5px] left-[5px]"
-                      alt={`${goal.title} icon`}
-                      src={goal.icon}
-                    />
-                  )}
-                </div>
+      <div className="flex flex-wrap items-center justify-center gap-[40px]">
+        {goalsData.map((goal) => (
+          <Card
+            key={goal.id}
+            className="w-[404px] h-[448px] rounded-[50px] overflow-hidden shadow-light-shadow"
+          >
+            <CardContent className="flex flex-col items-start gap-[52px] p-0 pt-[52px] pl-[45px] pr-[45px]">
+              <div className="relative w-[60px] h-[60px]">
+                {goal.iconType === "flame" ? (
+                  <FlameIcon className="w-[50px] h-[50px]" />
+                ) : (
+                  <img
+                    className="absolute w-[50px] h-[50px] top-[5px] left-[5px]"
+                    alt={`${goal.title} icon`}
+                    src={goal.icon}
+                  />
+                )}
+              </div>
 
-                <div className="flex flex-col items-start gap-10 w-full pb-[52px]">
-                  <h3 className="w-full font-h4 font-bold text-dark text-[32px] leading-[140%]">
-                    {goal.title}
-                  </h3>
+              <div className="flex flex-col items-start gap-10 w-full">
+                <h3 className="w-full font-h4 font-bold text-dark text-[32px] leading-[140%]">
+                  {goal.title}
+                </h3>
 
-                  <p className="w-full opacity-80 font-t3 font-normal text-[#282828] text-[16px] leading-[140%]">
-                    {goal.description}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                <p className="w-full opacity-80 font-t3 font-normal text-[#282828] text-[16px] leading-[140%]">
+                  {goal.description}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </section>
   );
