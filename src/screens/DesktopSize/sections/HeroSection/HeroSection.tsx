@@ -7,6 +7,7 @@ import { Separator } from "../../../../components/ui/separator";
 import { Avatar, AvatarImage, AvatarFallback } from "../../../../components/ui/avatar";
 import { Progress } from "../../../../components/ui/progress";
 import { TypingAnimation } from "../../../../components/magicui/typing-animation";
+import { BlurFade } from "../../../../components/magicui/blur-fade";
 
 export const HeroSection = (): JSX.Element => {
   return (
@@ -18,8 +19,8 @@ export const HeroSection = (): JSX.Element => {
             <div className="flex flex-col items-start gap-8 lg:gap-[52px] py-20 lg:py-0 text-center lg:text-left w-full lg:w-1/2">
               <div className="flex flex-col items-center lg:items-start gap-8">
                 <h1 className="font-h2 text-4xl lg:text-[64px] text-white leading-tight">
-                  <TypingAnimation className="font-h2 text-4xl lg:text-[64px] text-white leading-tight" delay={0} duration={100}>Единый  </TypingAnimation>
-                   <TypingAnimation className="font-h2 text-4xl lg:text-[64px] text-white leading-tight" delay={700} duration={100}>  личный кабинет</TypingAnimation>
+                    <TypingAnimation className="font-h2 text-4xl lg:text-[64px] text-white leading-tight" delay={400} duration={100}>Единый  </TypingAnimation>
+                   <TypingAnimation className="font-h2 text-4xl lg:text-[64px] text-white leading-tight" delay={1300} duration={100}>  личный кабинет</TypingAnimation>
                   {/* Единый<br />
                   личный кабинет */}
                 </h1>
