@@ -7,11 +7,11 @@ export const CareerSection = (): JSX.Element => {
     <section id="career" className="w-full py-8 md:py-16">
       <div className="container mx-auto px-4 md:px-6">
         <Card className="relative w-full bg-bluelight rounded-[20px] overflow-hidden">
-          <CardContent className="flex flex-col md:flex-row p-0">
-            <div className="flex flex-col py-8 md:py-[100px] px-6 md:pl-[148px] md:pr-44 relative z-10">
+          <CardContent className="flex flex-col md:flex-row p-0 w-full ">
+            <div className="flex flex-col py-8 md:py-[100px] px-6 md:pl-[148px] md:pr-44 relative z-10 md:w-2/3 ">
               <div className="max-w-full md:max-w-[701px]">
                 <h3 className="font-h3 text-2xl md:text-[42px] text-white leading-[140%] mb-6 md:mb-10">
-                  Мечаешь о карьере в IT?
+                  Мечтаешь о карьере в IT?
                 </h3>
 
                 <p className="text-white text-base md:text-xl leading-relaxed mb-6 md:mb-10 max-w-prose">
@@ -40,11 +40,13 @@ export const CareerSection = (): JSX.Element => {
               </div>
             </div>
 
-            <img
-              className="w-full md:w-[631px] h-auto md:h-[566px] md:absolute md:right-0 md:top-[-60px] object-contain"
+          
+             <img
+              className=" md:w-1/3 lg:w-1/3 object-contain p-14 "
               alt="Img business cat"
               src="/imgbusinesscat.png"
             />
+           
           </CardContent>
         </Card>
       </div>

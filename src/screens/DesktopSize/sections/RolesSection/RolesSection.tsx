@@ -76,16 +76,16 @@ export const RolesSection = (): JSX.Element => {
 
   return (
     <section className="w-full py-10 md:py-[140px] px-4 md:px-12 lg:px-[91px] bg-graybluedarkerbg">
-      <div className="flex flex-col items-start gap-8 md:gap-[52px] w-full">
+      <div className="flex flex-col items-start gap-8 md:gap-[52px] w-full container mx-auto px-4">
         <h2 className="w-full font-h4 text-2xl md:text-[42px] text-dark text-center font-bold leading-[140%]">
           Ролевая модель
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-16 w-full ">
           {roleCards.map((role) => (
-            <div key={role.id} className="relative">
+            <div key={role.id} className="relative bg-white rounded-[20px] md:rounded-[40px] shadow-shadow-soft">
               <Card className="rounded-[20px] md:rounded-[40px] shadow-shadow-soft h-auto md:h-[568px]">
-                <div className="relative pt-[100px] md:pt-[150px] pb-8 md:pb-[140px] px-4 md:px-[65px]">
+                <div className="relative pt-[100px] md:pt-[150px] pb-8 md:pb-[140px] px-4 md:px-[65px] ">
                   <img
                     className="absolute w-[150px] md:w-[207px] h-[150px] md:h-[207px] top-[-30px] md:top-[-58px] left-1/2 transform -translate-x-1/2"
                     alt={`${role.title} icon`}

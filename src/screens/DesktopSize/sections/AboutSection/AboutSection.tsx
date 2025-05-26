@@ -5,24 +5,11 @@ export const AboutSection = (): JSX.Element => {
     <section className="flex justify-center py-10 md:py-20 w-full px-4 md:px-6">
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-16 max-w-7xl">
         <div className="w-full md:w-1/2 flex justify-center">
-          <div className="relative">
-            {/* Light blue circular background */}
-            <div className="hidden md:block w-[448px] h-[448px] bg-bluelight rounded-full transform translate-y-[89px] translate-x-[65px]" />
-
-            {/* Brain image */}
-            <img
-              className="w-[200px] md:w-[307px] h-auto md:h-[308px] transform md:translate-y-12 md:translate-x-[425px]"
+           <img
+              className=""
               alt="Brain illustration"
-              src="/imgbrain.png"
+              src="/imgAvatarDIS.png"
             />
-
-            {/* Person image */}
-            <img
-              className="w-full max-w-[350px] md:max-w-[578px] h-auto"
-              alt="Person illustration"
-              src="/imgchel.png"
-            />
-          </div>
         </div>
 
         <div className="flex flex-col items-start gap-6 md:gap-10 w-full md:w-2/5">

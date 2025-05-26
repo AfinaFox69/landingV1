@@ -6,7 +6,7 @@ export const MissionSection = (): JSX.Element => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center gap-12 md:gap-24">
           <h2 className="text-center font-h3 text-2xl md:text-[42px] leading-[140%] tracking-[0] max-w-[1000px]">
-            <span className="text-black">Цель разработки: внедрение принципа </span>
+            <span className="text-black font-bold">Цель разработки: внедрение принципа </span>
             <span className="text-[#3073d6]">
               «Одно физическое лицо — одна учётная запись»
             </span>
@@ -16,13 +16,13 @@ export const MissionSection = (): JSX.Element => {
             <div className="relative h-[280px] md:h-[448px] -top-[37px]">
               {/* Right avatar */}
               <div
-                className="hidden md:block absolute w-96 h-96 top-[50px] left-[376px] bg-[#e0ecfe] rounded-[192px] bg-cover bg-center"
+                className=" hidden md:block absolute w-96 h-96 top-[50px] left-[376px] bg-[#e0ecfe] rounded-[192px] bg-cover bg-center blur-sm"
                 style={{ backgroundImage: "url(/imgavatarright.png)" }}
               />
 
               {/* Left avatar */}
               <div
-                className="hidden md:block absolute w-96 h-96 top-[50px] left-0 bg-[#e0ecfe] rounded-[192px] bg-cover bg-center"
+                className="hidden md:block absolute w-96 h-96 top-[50px] left-0 bg-[#e0ecfe] rounded-[192px] bg-cover bg-center blur-sm"
                 style={{ backgroundImage: "url(/imgavatarleft.png)" }}
               />
 
