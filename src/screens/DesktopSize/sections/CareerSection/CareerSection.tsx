@@ -4,49 +4,50 @@ import { Card, CardContent } from "../../../../components/ui/card";
 
 export const CareerSection = (): JSX.Element => {
   return (
-    <section className="w-full py-8 md:py-16 px-4 md:px-6">
-      <Card className="relative w-full bg-bluelight rounded-[20px] overflow-hidden">
-        <CardContent className="flex flex-col md:flex-row p-0">
-          <div className="flex flex-col py-8 md:py-[100px] px-6 md:pl-[148px] md:pr-44 relative z-10">
-            <div className="max-w-full md:max-w-[701px]">
-              <h3 className="font-h3 text-2xl md:text-[42px] text-white leading-[140%] mb-6 md:mb-10">
-                Мечаешь о карьере в IT?
-              </h3>
+    <section id="career" className="w-full py-8 md:py-16">
+      <div className="container mx-auto px-4 md:px-6">
+        <Card className="relative w-full bg-bluelight rounded-[20px] overflow-hidden">
+          <CardContent className="flex flex-col md:flex-row p-0">
+            <div className="flex flex-col py-8 md:py-[100px] px-6 md:pl-[148px] md:pr-44 relative z-10">
+              <div className="max-w-full md:max-w-[701px]">
+                <h3 className="font-h3 text-2xl md:text-[42px] text-white leading-[140%] mb-6 md:mb-10">
+                  Мечаешь о карьере в IT?
+                </h3>
 
-              <p className="text-white text-base md:text-xl leading-relaxed mb-6 md:mb-10">
-                <span>
-                  Хочешь получить реальный опыт работы, который выделит тебя
-                  среди других выпускников?{" "}
-                </span>
+                <p className="text-white text-base md:text-xl leading-relaxed mb-6 md:mb-10 max-w-prose">
+                  <span className="block mb-2">
+                    Хочешь получить реальный опыт работы, который выделит тебя
+                    среди других выпускников?
+                  </span>
 
-                <span className="font-t2">
-                  Департамент информатизации и связи приглашает тебя на
-                  стажировку!
-                </span>
+                  <span className="font-t2 block mb-2">
+                    Департамент информатизации и связи приглашает тебя на
+                    стажировку!
+                  </span>
 
-                <span>
-                  {" "}
-                  Ты получишь возможность работать над реальными проектами,
-                  учиться у профессионалов и видеть изнутри, как работает IT.
-                  Подай заявку прямо сейчас и начни строить своё будущее!
-                </span>
-              </p>
+                  <span className="block">
+                    Ты получишь возможность работать над реальными проектами,
+                    учиться у профессионалов и видеть изнутри, как работает IT.
+                    Подай заявку прямо сейчас и начни строить своё будущее!
+                  </span>
+                </p>
 
-              <Button className="w-full md:w-auto rounded-[30px] bg-white text-bluedark hover:bg-white/90 px-6 md:px-[37px] py-[15px] h-[50px]">
-                <span className="font-t3-bold">
-                  Подать заявку
-                </span>
-              </Button>
+                <Button className="w-full md:w-auto rounded-[30px] bg-white text-bluedark hover:bg-white/90 px-6 md:px-[37px] py-[15px] h-[50px]">
+                  <span className="font-t3-bold">
+                    Подать заявку
+                  </span>
+                </Button>
+              </div>
             </div>
-          </div>
 
-          <img
-            className="w-full md:w-[631px] h-auto md:h-[566px] md:absolute md:right-0 md:top-[-60px] object-contain"
-            alt="Img business cat"
-            src="/imgbusinesscat.png"
-          />
-        </CardContent>
-      </Card>
+            <img
+              className="w-full md:w-[631px] h-auto md:h-[566px] md:absolute md:right-0 md:top-[-60px] object-contain"
+              alt="Img business cat"
+              src="/imgbusinesscat.png"
+            />
+          </CardContent>
+        </Card>
+      </div>
     </section>
   );
 };

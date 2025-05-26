@@ -17,22 +17,22 @@ import { RoadmapSection } from "./sections/RoadmapSection/RoadmapSection";
 import { RolesSection } from "./sections/RolesSection";
 import { StatisticsSection } from "./sections/StatisticsSection/StatisticsSection";
 import { X } from "lucide-react";
+import { Link } from "react-scroll";
 
 export const DesktopSize = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   // Navigation menu items
   const navItems = [
-    { label: "О нас", href: "#about" },
-    { label: "Роудмап", href: "#roadmap" },
-    { label: "Роли", href: "#roles" },
-    { label: "Фичи", href: "#features" },
-    { label: "Стажировка", href: "#career" },
-    { label: "Контакты", href: "#contacts" },
+    { label: "О нас", href: "about" },
+    { label: "Роудмап", href: "roadmap" },
+    { label: "Роли", href: "roles" },
+    { label: "Фичи", href: "features" },
+    { label: "Стажировка", href: "career" },
+    { label: "Контакты", href: "contacts" },
   ];
 
   React.useEffect(() => {
-    // Блокируем скролл при открытом меню
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -57,7 +57,6 @@ export const DesktopSize = (): JSX.Element => {
             <div className="ml-3 h-[35px] w-[132px] bg-[url(/group-8.png)] bg-contain bg-no-repeat bg-center" />
           </div>
 
-          {/* Мобильное меню */}
           <button 
             className="lg:hidden text-white p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -72,18 +71,21 @@ export const DesktopSize = (): JSX.Element => {
             )}
           </button>
 
-          {/* Десктопное меню */}
           <div className="hidden lg:flex items-center gap-8">
             <NavigationMenu>
               <NavigationMenuList className="flex gap-[52px]">
                 {navItems.map((item, index) => (
                   <NavigationMenuItem key={index}>
-                    <NavigationMenuLink
-                      href={item.href}
-                      className="font-t2 text-white text-xl leading-5"
+                    <Link
+                      to={item.href}
+                      spy={true}
+                      smooth={true}
+                      offset={-100}
+                      duration={500}
+                      className="font-t2 text-white text-xl leading-5 cursor-pointer"
                     >
                       {item.label}
-                    </NavigationMenuLink>
+                    </Link>
                   </NavigationMenuItem>
                 ))}
               </NavigationMenuList>
@@ -94,7 +96,6 @@ export const DesktopSize = (): JSX.Element => {
             </Button>
           </div>
 
-          {/* Мобильное полноэкранное меню */}
           <div 
             className={`fixed inset-0 bg-dark transition-transform duration-300 ease-in-out ${
               isMenuOpen ? 'translate-x-0' : 'translate-x-full'
@@ -106,13 +107,17 @@ export const DesktopSize = (): JSX.Element => {
                 <ul className="space-y-6">
                   {navItems.map((item, index) => (
                     <li key={index}>
-                      <a
-                        href={item.href}
-                        className="text-white text-3xl font-t2 block py-2"
+                      <Link
+                        to={item.href}
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        className="text-white text-3xl font-t2 block py-2 cursor-pointer"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
