@@ -11,7 +11,7 @@ import { BlurFade } from "../../../../components/magicui/blur-fade";
 
 export const HeroSection = (): JSX.Element => {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-dark">
+    <section className="relative w-full min-h-screen overflow-hidden bg-dark bg-[url(/Background.svg)]">
       <div className="md:container mx-auto md:px-4">
         <div className="relative h-full w-full">
           <div className="flex flex-col lg:flex-row min-h-screen items-center justify-center bg-[url(/blur-gradient-1.svg)] bg-cover bg-center bg-no-repeat">
