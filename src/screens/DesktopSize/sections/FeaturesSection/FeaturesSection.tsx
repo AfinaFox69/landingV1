@@ -300,7 +300,7 @@ export const FeaturesSection: React.FC = () => {
               className={` border-1 border-solid border-black p-2 text-sm transition-all duration-300 rounded-full  h-full flex items-center ${
                 
                 activeSlide === slide.id
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-[#3073D7] text-white'
                   : 'hover:bg-gray-100'
               }`}
             >
