@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
-import { NumberTicker } from "@magic-ui/react";
+import { NumberTicker } from "@/components/magicui/number-ticker";
 
 export const StatisticsSection = (): JSX.Element => {
   const statisticsData = [
