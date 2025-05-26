@@ -42,7 +42,7 @@ export const DesktopSize = (): JSX.Element => {
 
   return (
     <div className="bg-white flex flex-col items-center w-full">
-      <header className="w-full fixed top-0 z-50 bg-black/70  md:backdrop-blur-md">
+      <header className="backdrop-blur-md w-full fixed top-0 z-50 bg-black/70  md:backdrop-blur-md">
         <div className=" container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center ">
           <div className="flex items-center h-10">
             <img className="h-full w-auto" alt="Vector" src="/vector-14.svg" />
@@ -84,8 +84,11 @@ export const DesktopSize = (): JSX.Element => {
             <Button className="px-[38px] py-[15px] h-[50px] bg-bluebright rounded-[30px] font-t3-bold text-white">Протестировать</Button>
           </div>
 
-          <div
-            className={`fixed inset-0 bg-black/70  backdrop-blur-sm transition-transform duration-300 ease-in-out ${
+         
+        </div>
+      </header>
+       <div
+            className={`z-[100000] fixed inset-0 bg-black/70 backdrop-blur-sm transition-transform duration-300 ease-in-out ${
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             } lg:hidden`}
             style={{ top: "72px" }}>
@@ -116,8 +119,6 @@ export const DesktopSize = (): JSX.Element => {
               </Button>
             </div>
           </div>
-        </div>
-      </header>
 
       <main className="w-full">
         <HeroSection />

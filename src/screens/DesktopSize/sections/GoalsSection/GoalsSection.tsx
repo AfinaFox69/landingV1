@@ -39,7 +39,7 @@ export const GoalsSection = (): JSX.Element => {
     <section className="bg-graybluelightbg rounded-[50px_50px_0px_0px] overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 py-10 md:py-[140px]">
         <div className="flex flex-col items-center gap-8 md:gap-[52px]">
-          <h2 className="font-h3 text-dark text-3xl md:text-[42px] font-bold text-center leading-[140%] md:mb-[40px]">
+          <h2 className="font-h3 text-dark text-3xl md:text-[42px] font-bold text-center leading-[140%] md:mb-[4px]">
             
             <HyperText startOnView className="!font-[PT Sans Caption] font-h3 text-dark text-3xl md:text-[42px] font-bold text-center leading-[140%] mb-[40px]">Задачи</HyperText>
           </h2>

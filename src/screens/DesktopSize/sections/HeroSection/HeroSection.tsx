@@ -17,7 +17,7 @@ export const HeroSection = (): JSX.Element => {
           <div className="flex flex-col lg:flex-row min-h-screen items-center justify-center bg-[url(/blur-gradient-1.svg)] bg-cover bg-center bg-no-repeat">
             {/* Left side - Text content */}
             <div className="flex flex-col items-start gap-8 lg:gap-[52px] py-20 lg:py-0 text-center lg:text-left w-full lg:w-1/2">
-              <div className="flex flex-col items-center lg:items-start gap-8">
+              <div className="flex flex-col items-center lg:items-start gap-8 min-w-[380px]">
                 <h1 className="font-h2 text-4xl lg:text-[64px] text-white leading-tight">
                     <TypingAnimation className="font-h2 text-4xl lg:text-[64px] text-white leading-tight" delay={400} duration={100}>Единый  </TypingAnimation>
                    <TypingAnimation className="font-h2 text-4xl lg:text-[64px] text-white leading-tight" delay={900} duration={100}>  личный кабинет</TypingAnimation>
@@ -25,7 +25,7 @@ export const HeroSection = (): JSX.Element => {
                   личный кабинет */}
                 </h1>
                 <p className="text-white text-lg lg:text-xl leading-relaxed max-w-[529px]">
-                  <TypingAnimation className="text-white text-lg lg:text-xl leading-relaxed max-w-[529px] font-light" delay={2600} duration={30}>  Цифровая платформа, которая упрощает взаимодействие студентов  с университетом и образовательными ресурсами</TypingAnimation>
+                  <TypingAnimation className="text-white text-lg lg:text-xl leading-relaxed max-w-[529px] font-light" delay={2800} duration={30}>  Цифровая платформа, которая упрощает взаимодействие студентов  с университетом и образовательными ресурсами</TypingAnimation>
                         {/* <TypingAnimation className="text-white text-lg lg:text-xl leading-relaxed max-w-[529px] font-light" delay={2500} duration={150}>  с университетом и образовательными ресурсами</TypingAnimation> */}
                   {/* Цифровая платформа, которая упрощает взаимодействие студентов */}
                   
