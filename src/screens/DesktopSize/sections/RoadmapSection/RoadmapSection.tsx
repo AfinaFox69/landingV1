@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Carousel } from 'antd';
 import { CarouselRef } from 'antd/es/carousel';
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
+import { HyperText } from '../../../../components/magicui/hyper-text';
 
 interface Feature {
   title: string;
@@ -154,7 +155,8 @@ export const RoadmapSection = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 "  id="roadmap" >
        <h2 className="font-h3 text-dark text-3xl md:text-[42px] font-bold text-center leading-[140%] mb-[50px]">
-            Этапы развития проекта
+            
+             <HyperText startOnView className="font-h3 text-dark text-3xl md:text-[42px] font-bold text-center leading-[140%] mb-[50px]">Этапы развития проекта</HyperText>
           </h2>
       {/* Timeline indicator */}
       <div className="w-full mb-8 ">

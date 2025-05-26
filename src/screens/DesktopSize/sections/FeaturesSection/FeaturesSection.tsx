@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, ConfigProvider } from 'antd';
 import { Globe, BookOpen, Users, Briefcase, User, CheckSquare, Calendar, ClipboardList, Table, Clock } from 'lucide-react';
+import { HyperText } from '../../../../components/magicui/hyper-text';
 
 // Определение типа данных для слайда
 interface SlideData {
@@ -285,7 +286,8 @@ export const FeaturesSection: React.FC = () => {
       }}
     >
        <h2 className="w-full font-h4 text-2xl md:text-[42px] text-dark text-center font-bold leading-[140%] mb-[40px] mt-[100px]">
-          Реализованные фичи
+          
+          <HyperText startOnView className="w-full font-h4 text-2xl md:text-[42px] text-dark text-center font-bold leading-[140%] mb-[40px] mt-[100px]">Реализованные фичи</HyperText>
         </h2>
       <div id="features" className="max-w-7xl mx-auto px-4 py-6">
         {/* Навигационные кнопки */}

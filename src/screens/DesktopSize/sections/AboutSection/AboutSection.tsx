@@ -1,4 +1,5 @@
 import React from "react";
+import { HyperText } from "../../../../components/magicui/hyper-text";
 
 export const AboutSection = (): JSX.Element => {
   return (
@@ -14,7 +15,8 @@ export const AboutSection = (): JSX.Element => {
 
         <div className="flex flex-col items-start gap-6 md:gap-10 w-full md:w-2/5">
           <h2 className="font-h3 text-dark text-3xl md:text-[42px] font-bold leading-[140%] text-center md:text-left w-full">
-            О нас
+            
+            <HyperText startOnView={true} className="font-h3 text-dark text-3xl md:text-[42px] font-bold leading-[140%] text-center md:text-left w-full">О нас</HyperText>
           </h2>
 
           <p className="font-t2 text-dark text-lg md:text-[20px] leading-[150%] text-center md:text-left">
