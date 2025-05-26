@@ -5,7 +5,7 @@ export const MissionSection = (): JSX.Element => {
     <section className="w-full py-8 md:py-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center gap-12 md:gap-24">
-          <h2 className="text-center font-h3 text-2xl md:text-[42px] leading-[140%] tracking-[0] max-w-[1000px]">
+          <h2 className="text-center font-h3 text-2xl md:text-[42px] leading-[140%] tracking-[0] max-w-[1000px] mb-[40px]">
             <span className="text-black font-bold">Цель разработки: внедрение принципа </span>
             <span className="text-[#3073d6]">
               «Одно физическое лицо — одна учётная запись»

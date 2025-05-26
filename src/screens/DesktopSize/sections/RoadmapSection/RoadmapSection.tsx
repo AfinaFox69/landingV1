@@ -3,6 +3,11 @@ import { Carousel } from 'antd';
 import { CarouselRef } from 'antd/es/carousel';
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 
+interface Feature {
+  title: string;
+  description: string[];
+}
+
 interface TimelineItem {
   id: string;
   title: string;
@@ -12,94 +17,108 @@ interface TimelineItem {
   status: 'completed' | 'in-progress' | 'upcoming';
   statusText: string;
   description: string;
-  features: string[];
+  features: Feature[];
   additionalFeatures?: string[];
 }
 
-interface TimelineCarouselProps {
-  items: TimelineItem[];
-}
 
-export const RoadmapSection: React.FC<TimelineCarouselProps> = () => {
+
+export const RoadmapSection = () => {
   const items = [
   {
     id: 'project-1',
-    title: 'Фаза 1',
-    date: 'Январь 2024',
-    year: '2024',
+    title: '2022 - 2023',
+    date: '',
+    year: '',
     image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     status: 'completed',
     statusText: 'Завершено',
-    description: 'Начальный этап разработки',
+    description: '',
     features: [
-      'Анализ требований и планирование',
-      'Разработка архитектуры проекта',
-      'Создание базовой инфраструктуры'
-    ],
-    additionalFeatures: [
-      'Интеграция с внешними сервисами',
-      'Оптимизация производительности',
-      'Расширенная аналитика'
+      {
+        title: 'Декабрь 2022',
+        description: ['Отбор кандидатов на стажировку и формирование проектных команд']
+      },
+      {
+        title: 'Февраль - Март 2023',
+        description: ['Запуск проекта по разработке Единого личного кабинета']
+      },
+      {
+        title: 'Сентябрь - Октябрь 2023',
+        description: ['Разработка англоязычного кабинета для поступающих']
+      },
+      {
+        title: 'Ноябрь 2023',
+        description: ['Отбор на вторую волну стажировок DISTRICT', 'Начало проектов: Трудоустройство, Отпуск, Практики студентов, Командировки, Центр единого облуживания']
+      }
     ]
   },
   {
-    id: 'project-2',
-    title: 'Фаза 2',
-    date: 'Март 2024',
-    year: '2024',
-    image: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    id: 'project-1',
+    title: '2024',
+    date: '',
+    year: '',
+    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    status: 'completed',
+    statusText: 'Завершено',
+    description: '',
+    features: [
+      {
+        title: 'Январь',
+        description: ['Начало работ по реструктуризации Единого личного кабинета']
+      },
+      {
+        title: 'Май',
+        description: ['Начало проекта «Табель»']
+      },
+      {
+        title: 'Ноябрь',
+        description: ['Разработка мессенджера КФУ']
+      }
+      
+    ]
+  },
+  {
+    id: 'project-1',
+    title: '2025',
+    date: '',
+    year: '',
+    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     status: 'in-progress',
-    statusText: 'В разработке',
-    description: 'Развитие функциональности',
+    statusText: 'В работе',
+    description: '',
     features: [
-      'Разработка ключевых компонентов',
-      'Внедрение системы безопасности',
-      'Тестирование и отладка'
-    ],
-    additionalFeatures: [
-      'Масштабирование системы',
-      'Улучшение пользовательского опыта',
-      'Оптимизация работы с данными'
+      {
+        title: 'Март - Май',
+        description: ['Разработка модуля «Преподавателю» ','Разработка блока «Обо мне»','Тестовая эксплуатация ЕЛК ']
+      },
+      {
+        title: 'Май - Сентябрь',
+        description: ['Настройка и тестирование жизненного цикла учётной записи и корректной работы ролевой модели кабинета','Сбор обратной связи от студентов, подготовка кабинета к опытной эксплуатации ']
+      },
+      {
+        title: 'Июль - Октябрь',
+        description: ['Внедрение проекта «Табель»','Создание сервисов для аспирантов, интеграция с ролью «Студент»']
+      }
+      
     ]
   },
   {
-    id: 'project-3',
-    title: 'Фаза 3',
-    date: 'Июнь 2024',
-    year: '2024',
-    image: 'https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    id: 'project-1',
+    title: '2026',
+    date: '',
+    year: '',
+    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     status: 'upcoming',
-    statusText: 'Планируется',
-    description: 'Финальная стадия',
+    statusText: 'В плане',
+    description: '',
     features: [
-      'Запуск в производство',
-      'Мониторинг и поддержка',
-      'Сбор обратной связи'
-    ],
-    additionalFeatures: [
-      'Расширение функциональности',
-      'Интеграция новых технологий',
-      'Оптимизация процессов'
-    ]
-  },
-  {
-    id: 'project-3',
-    title: 'Фаза 3',
-    date: 'Июнь 2024',
-    year: '2024',
-    image: 'https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    status: 'upcoming',
-    statusText: 'Планируется',
-    description: 'Финальная стадия',
-    features: [
-      'Запуск в производство',
-      'Мониторинг и поддержка',
-      'Сбор обратной связи'
-    ],
-    additionalFeatures: [
-      'Расширение функциональности',
-      'Интеграция новых технологий',
-      'Оптимизация процессов'
+      {
+        title: 'Январь',
+        description: ['Создание сервисов для слушателей курсов, для сотрудников']
+      },
+     
+      
     ]
   }
 ];
@@ -133,23 +152,23 @@ export const RoadmapSection: React.FC<TimelineCarouselProps> = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
-       <h2 className="font-h3 text-dark text-3xl md:text-[42px] font-bold text-center leading-[140%]">
+    <div className="max-w-7xl mx-auto px-4 py-12 "  id="roadmap" >
+       <h2 className="font-h3 text-dark text-3xl md:text-[42px] font-bold text-center leading-[140%] mb-[50px]">
             Этапы развития проекта
           </h2>
       {/* Timeline indicator */}
-      <div className="w-full mb-8">
+      <div className="w-full mb-8 ">
         <div className="relative">
-          <div className="border-[1px] absolute top-[17%] left-0 right-0 h-0.5 bg-gray-400 -translate-y-1/2"></div>
-          <div className="relative flex justify-between items-center">
+          <div className="border-[1px] absolute top-[20%] left-0 right-0 h-0.5 bg-gray-400 -translate-y-1/2"></div>
+          <div className="relative flex justify-between items-center ">
             {items.map((item, index) => (
               <div key={item.id} className="flex flex-col items-center">
                 <div 
                   className={`w-6 h-6 rounded-full z-10 transition-all duration-300 ${
                     index === currentIndex 
-                      ? 'bg-violet-600 scale-110' 
+                      ? 'bg-[#65A1FA] scale-110' 
                       : index < currentIndex 
-                        ? 'bg-violet-400' 
+                        ? 'bg-[#D1E3FE]' 
                         : 'bg-gray-200'
                   }`}
                 />
@@ -191,7 +210,7 @@ export const RoadmapSection: React.FC<TimelineCarouselProps> = () => {
           {items.map((item) => (
             <div key={item.id}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4">
-                <div className="rounded-xl overflow-hidden bg-black/5">
+                <div className="rounded-xl overflow-hidden bg-black/5 flex items-center justify-center">
                   <img 
                     src={item.image} 
                     alt={item.title} 
@@ -206,7 +225,7 @@ export const RoadmapSection: React.FC<TimelineCarouselProps> = () => {
                     </span>
 
                     <div>
-                      <h2 className="text-base md:text-5xl font-bold mb-1">{item.title}</h2>
+                      <h2 className="text-base sm:text-xl font-bold ">{item.title}</h2>
                       <p className="text-gray-600">{item.year}</p>
                     </div>
 
@@ -214,15 +233,20 @@ export const RoadmapSection: React.FC<TimelineCarouselProps> = () => {
                       <h3 className="text-xl font-semibold mb-4">{item.description}</h3>
                       <ul className="space-y-4">
                         {item.features.map((feature, index) => (
-                          <li key={index} className="flex items-start">
-                            <span className="inline-block w-2 h-2 mt-2 mr-2 bg-violet-500 rounded-full"></span>
-                            <span>{feature}</span>
+                          <li key={index} className="flex flex-col items-start">
+                            <span className="text-lg font-semibold mb-1">{feature.title}</span>
+                            {feature.description.map((desc, descIndex) => (
+                              <div key={descIndex} className="flex items-start">
+                               <div className='h-[22px] flex items-center'> <span className="inline-block w-1 h-1 m-1 bg-black rounded-full "></span></div>
+                                <span>{desc}</span>
+                              </div>
+                            ))}
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    {item.additionalFeatures && (
+                    {/* {item.additionalFeatures && (
                       <div>
                         <h3 className="text-xl font-semibold mb-4">Возможные дополнительные возможности</h3>
                         <ul className="space-y-4">
@@ -234,14 +258,14 @@ export const RoadmapSection: React.FC<TimelineCarouselProps> = () => {
                           ))}
                         </ul>
                       </div>
-                    )}
+                    )} */}
 
-                    <div>
+                    {/* <div>
                       <button className="inline-flex items-center px-4 py-2 bg-violet-600 text-white rounded-lg transition-colors hover:bg-violet-700">
                         Узнать больше
                         <ExternalLink className="ml-2 h-4 w-4" />
                       </button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

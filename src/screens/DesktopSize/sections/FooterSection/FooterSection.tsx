@@ -11,7 +11,7 @@ export const FooterSection = (): JSX.Element => {
 
   const legalLinks = [
     { text: "Политика конфиденциальности", width: "221px" },
-    { text: "Условия использования", width: "166px" },
+   
   ];
 
   return (
@@ -163,16 +163,17 @@ export const FooterSection = (): JSX.Element => {
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-4 md:gap-[74px]">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-4]">
               {legalLinks.map((link, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href="https://kpfu.ru/portal/docs/F722252292/pd_policy.pdf"
                   className="font-t3 text-gray text-sm md:text-base hover:text-bluebright transition-colors"
                 >
                   {link.text}
                 </a>
               ))}
+              {/* <div  className="ml-[2%] font-t3 text-gray text-sm md:text-base hover:text-bluebright transition-colors">Условия использования</div> */}
             </div>
           </div>
         </div>

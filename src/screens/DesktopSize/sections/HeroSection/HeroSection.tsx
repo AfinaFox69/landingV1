@@ -1,27 +1,33 @@
 import React from "react";
+
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { Badge } from "../../../../components/ui/badge";
 import { Separator } from "../../../../components/ui/separator";
 import { Avatar, AvatarImage, AvatarFallback } from "../../../../components/ui/avatar";
 import { Progress } from "../../../../components/ui/progress";
+import { TypingAnimation } from "../../../../components/magicui/typing-animation";
 
 export const HeroSection = (): JSX.Element => {
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-dark">
-      <div className="container mx-auto px-4">
+      <div className="md:container mx-auto md:px-4">
         <div className="relative h-full w-full">
           <div className="flex flex-col lg:flex-row min-h-screen items-center justify-center bg-[url(/blur-gradient-1.svg)] bg-cover bg-center bg-no-repeat">
             {/* Left side - Text content */}
             <div className="flex flex-col items-start gap-8 lg:gap-[52px] py-20 lg:py-0 text-center lg:text-left w-full lg:w-1/2">
               <div className="flex flex-col items-center lg:items-start gap-8">
                 <h1 className="font-h2 text-4xl lg:text-[64px] text-white leading-tight">
-                  Единый<br />
-                  личный кабинет
+                  <TypingAnimation className="font-h2 text-4xl lg:text-[64px] text-white leading-tight" delay={0} duration={100}>Единый  </TypingAnimation>
+                   <TypingAnimation className="font-h2 text-4xl lg:text-[64px] text-white leading-tight" delay={700} duration={100}>  личный кабинет</TypingAnimation>
+                  {/* Единый<br />
+                  личный кабинет */}
                 </h1>
                 <p className="text-white text-lg lg:text-xl leading-relaxed max-w-[529px]">
-                  Цифровая платформа, которая упрощает взаимодействие студентов
-                  с университетом и образовательными ресурсами
+                  <TypingAnimation className="text-white text-lg lg:text-xl leading-relaxed max-w-[529px] font-light" delay={2200} duration={30}>  Цифровая платформа, которая упрощает взаимодействие студентов  с университетом и образовательными ресурсами</TypingAnimation>
+                        {/* <TypingAnimation className="text-white text-lg lg:text-xl leading-relaxed max-w-[529px] font-light" delay={2500} duration={150}>  с университетом и образовательными ресурсами</TypingAnimation> */}
+                  {/* Цифровая платформа, которая упрощает взаимодействие студентов */}
+                  
                 </p>
               </div>
               <Button 

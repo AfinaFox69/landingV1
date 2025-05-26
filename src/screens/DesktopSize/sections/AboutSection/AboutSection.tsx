@@ -2,7 +2,7 @@ import React from "react";
 
 export const AboutSection = (): JSX.Element => {
   return (
-    <section className="flex justify-center py-10 md:py-20 w-full px-4 md:px-6">
+    <section id="about" className="flex justify-center py-12 md:py-20  w-full px-4 md:px-6">
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-16 max-w-7xl">
         <div className="w-full md:w-1/2 flex justify-center">
            <img

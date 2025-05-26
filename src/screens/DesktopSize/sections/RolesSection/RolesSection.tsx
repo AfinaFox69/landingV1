@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
+import {  StarFilled   } from '@ant-design/icons';
 
 export const RolesSection = (): JSX.Element => {
   // Data for role cards to enable mapping
@@ -37,7 +38,7 @@ export const RolesSection = (): JSX.Element => {
         "Запись на прохождение образовательных курсов КФУ",
         "Просмотр вакансий, отправка резюме, прохождение этапов трудоустройства",
         "Подача заявления на поступление в КФУ",
-        "Должностные сервисы, подключаемые индивидуально",
+        // "Должностные сервисы, подключаемые индивидуально",
       ],
     },
     {
@@ -75,9 +76,9 @@ export const RolesSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="w-full py-10 md:py-[140px] px-4 md:px-12 lg:px-[91px] bg-graybluedarkerbg">
+    <section id="roles" className="w-full py-10 md:py-[140px] px-4 md:px-12 lg:px-[91px] bg-graybluedarkerbg">
       <div className="flex flex-col items-start gap-8 md:gap-[52px] w-full container mx-auto px-4">
-        <h2 className="w-full font-h4 text-2xl md:text-[42px] text-dark text-center font-bold leading-[140%]">
+        <h2 className="w-full font-h4 text-2xl md:text-[42px] text-dark text-center font-bold leading-[140%] mb-[40px]">
           Ролевая модель
         </h2>
 
@@ -95,11 +96,15 @@ export const RolesSection = (): JSX.Element => {
                     <h3 className="w-full font-h4 text-xl md:text-[32px] text-dark text-center mb-6 md:mb-[85px]">
                       {role.title}
                     </h3>
-                    <div className="opacity-80 font-t3 text-sm md:text-base text-dark space-y-2">
+                    <div className="opacity-80 font-t3 text-sm md:text-sm text-dark space-y-2">
                       {role.description.map((item, index) => (
-                        <React.Fragment key={index}>
-                          {item}
-                          {index < role.description.length - 1 && <br />}
+                        <React.Fragment key={index} >
+                          <div className="flex items-center gap-3 ">
+                            {/* <div className=" !w-[3px] !h-[3px]   bg-black  rounded-[50%]"></div> */}
+                            <StarFilled className="w-[8px] "/>
+                            {item}
+                          </div>
+                         
                         </React.Fragment>
                       ))}
                     </div>

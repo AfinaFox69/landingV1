@@ -1,5 +1,7 @@
 import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
+import { NumberTicker } from "../../../../components/magicui/number-ticker";
+
 
 export const StatisticsSection = (): JSX.Element => {
   const statisticsData = [
@@ -20,7 +22,12 @@ export const StatisticsSection = (): JSX.Element => {
               <CardContent className="p-0">
                 <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
                   <h2 className="font-h1 text-5xl md:text-[100px] text-dark leading-tight">
-                    {stat.value}
+                     <NumberTicker
+                     // @ts-ignore
+                      value={(stat?.value)}
+                      className="whitespace-pre-wrap text-8xl font-medium tracking-tighter text-black dark:text-white"
+                    />
+                   
                   </h2>
                   <p className="font-['PT_Sans',Helvetica] font-normal text-bwbw-6 text-lg md:text-xl leading-[30px]">
                     {stat.description}
