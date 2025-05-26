@@ -42,8 +42,8 @@ export const DesktopSize = (): JSX.Element => {
 
   return (
     <div className="bg-white flex flex-col items-center w-full">
-      <header className="w-full fixed top-0 z-50 bg-dark">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <header className="w-full fixed top-0 z-50 bg-black/70  md:backdrop-blur-md">
+        <div className=" container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center ">
           <div className="flex items-center h-10">
             <img className="h-full w-auto" alt="Vector" src="/vector-14.svg" />
             <div className="ml-3 h-[35px] w-[132px] bg-[url(/group-8.png)] bg-contain bg-no-repeat bg-center" />
@@ -85,7 +85,7 @@ export const DesktopSize = (): JSX.Element => {
           </div>
 
           <div
-            className={`fixed inset-0 bg-dark transition-transform duration-300 ease-in-out ${
+            className={`fixed inset-0 bg-black/70  backdrop-blur-sm transition-transform duration-300 ease-in-out ${
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             } lg:hidden`}
             style={{ top: "72px" }}>

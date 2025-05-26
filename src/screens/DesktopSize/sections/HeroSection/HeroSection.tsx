@@ -20,12 +20,12 @@ export const HeroSection = (): JSX.Element => {
               <div className="flex flex-col items-center lg:items-start gap-8">
                 <h1 className="font-h2 text-4xl lg:text-[64px] text-white leading-tight">
                     <TypingAnimation className="font-h2 text-4xl lg:text-[64px] text-white leading-tight" delay={400} duration={100}>Единый  </TypingAnimation>
-                   <TypingAnimation className="font-h2 text-4xl lg:text-[64px] text-white leading-tight" delay={1300} duration={100}>  личный кабинет</TypingAnimation>
+                   <TypingAnimation className="font-h2 text-4xl lg:text-[64px] text-white leading-tight" delay={900} duration={100}>  личный кабинет</TypingAnimation>
                   {/* Единый<br />
                   личный кабинет */}
                 </h1>
                 <p className="text-white text-lg lg:text-xl leading-relaxed max-w-[529px]">
-                  <TypingAnimation className="text-white text-lg lg:text-xl leading-relaxed max-w-[529px] font-light" delay={2200} duration={30}>  Цифровая платформа, которая упрощает взаимодействие студентов  с университетом и образовательными ресурсами</TypingAnimation>
+                  <TypingAnimation className="text-white text-lg lg:text-xl leading-relaxed max-w-[529px] font-light" delay={2600} duration={30}>  Цифровая платформа, которая упрощает взаимодействие студентов  с университетом и образовательными ресурсами</TypingAnimation>
                         {/* <TypingAnimation className="text-white text-lg lg:text-xl leading-relaxed max-w-[529px] font-light" delay={2500} duration={150}>  с университетом и образовательными ресурсами</TypingAnimation> */}
                   {/* Цифровая платформа, которая упрощает взаимодействие студентов */}
                   
