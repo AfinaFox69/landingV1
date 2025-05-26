@@ -144,7 +144,7 @@ export const FooterSection = (): JSX.Element => {
                       </p>
                     )}
                     {info.phone && (
-                      <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
+                      <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-base leading-[30px]">
                         {info.phone}
                       </p>
                     )}

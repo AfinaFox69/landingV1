@@ -176,7 +176,7 @@ export const RoadmapSection: React.FC<TimelineCarouselProps> = () => {
         {/* Navigation buttons */}
         <button
           onClick={goToPrev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md transition-all hover:bg-gray-100 hover:shadow-lg focus:outline-none"
+          className="absolute left-4 top-[22%] md:top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md transition-all hover:bg-gray-100 hover:shadow-lg focus:outline-none"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6 text-gray-700" />
@@ -199,14 +199,14 @@ export const RoadmapSection: React.FC<TimelineCarouselProps> = () => {
                   />
                 </div>
 
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center ">
                   <div className="flex flex-col space-y-6">
                     <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full w-fit ${getStatusBadgeClass(item.status)}`}>
                       {item.statusText}
                     </span>
 
                     <div>
-                      <h2 className="text-5xl font-bold mb-1">{item.title}</h2>
+                      <h2 className="text-base md:text-5xl font-bold mb-1">{item.title}</h2>
                       <p className="text-gray-600">{item.year}</p>
                     </div>
 
@@ -251,7 +251,7 @@ export const RoadmapSection: React.FC<TimelineCarouselProps> = () => {
 
         <button
           onClick={goToNext}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md transition-all hover:bg-gray-100 hover:shadow-lg focus:outline-none"
+          className="absolute right-4  top-[22%] md:top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md transition-all hover:bg-gray-100 hover:shadow-lg focus:outline-none"
           aria-label="Next slide"
         >
           <ChevronRight className="w-6 h-6 text-gray-700" />
