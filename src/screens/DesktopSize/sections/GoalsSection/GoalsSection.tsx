@@ -50,10 +50,10 @@ export const GoalsSection = (): JSX.Element => {
                 key={goal.id}
                 className="w-full md:w-[404px] h-auto md:h-[448px] rounded-[50px] overflow-hidden shadow-light-shadow"
               >
-                <CardContent className="flex flex-col items-start gap-[52px] p-6 md:p-[52px]">
+                <CardContent className="flex flex-col items-start gap-[5px] md:gap-[52px] p-10 md:p-[52px]">
                   <div className="relative w-[60px] h-[60px]">
                     {goal.iconType === "flame" ? (
-                      <FlameIcon className="w-[50px] h-[50px]" />
+                      <FlameIcon className="w-[50px] h-[50px] text-blue-600 " />
                     ) : (
                       <img
                         className="absolute w-[50px] h-[50px] top-[5px] left-[5px]"
@@ -68,7 +68,7 @@ export const GoalsSection = (): JSX.Element => {
                       {goal.title}
                     </h3>
 
-                    <p className="w-full opacity-80 font-t3 font-normal text-[#282828] text-base md:text-[16px] leading-[140%]">
+                    <p className="w-full opacity-80 font-t3 font-normal text-[#282828] text-sm md:text-base md:text-[16px] leading-[140%]">
                       {goal.description}
                     </p>
                   </div>

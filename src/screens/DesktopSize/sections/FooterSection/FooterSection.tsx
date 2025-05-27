@@ -89,10 +89,10 @@ export const FooterSection = (): JSX.Element => {
               </div>
 
               {/* Second Logo */}
-              <div className="relative w-[334.31px] h-[68px]">
-                <div className="absolute w-[233px] h-[63px] top-0.5 left-[102px]">
+              <div className=" hidden md:flex relative w-[334.31px] h-[68px]">
+                <div className=" absolute w-[233px] h-[63px] top-0.5 left-[102px]">
                   <img
-                    className="absolute w-[152px] h-[49px] top-[7px] left-[81px]"
+                    className=" absolute w-[152px] h-[49px] top-[7px] left-[81px]"
                     alt="Group"
                     src="/group-1.png"
                   />

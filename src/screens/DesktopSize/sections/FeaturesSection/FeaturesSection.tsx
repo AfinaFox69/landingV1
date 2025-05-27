@@ -291,7 +291,7 @@ export const FeaturesSection: React.FC = () => {
         </h2>
       <div id="features" className="max-w-7xl mx-auto px-4 py-6">
         {/* Навигационные кнопки */}
-        <div className="flex flex-wrap gap-2 mb-8">
+        <div className="flex flex-wrap gap-2 mb-8 " style={{ fontFamily: 'PT Sans' }}>
           {slides.map((slide) => (
             <Button
               key={slide.id}
@@ -321,7 +321,7 @@ export const FeaturesSection: React.FC = () => {
           </div>
 
           {/* Правая часть - контент */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center " style={{ fontFamily: 'PT Sans' }}>
             {currentSlide.content}
           </div>
         </div>

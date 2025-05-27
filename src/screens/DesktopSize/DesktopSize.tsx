@@ -81,7 +81,7 @@ export const DesktopSize = (): JSX.Element => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Button className="px-[38px] py-[15px] h-[50px] bg-bluebright rounded-[30px] font-t3-bold text-white">Протестировать</Button>
+            <Button className="hover:bg-white hover:text-black  px-[38px] py-[15px] h-[50px] bg-bluebright rounded-[30px] font-t3-bold text-white">Протестировать</Button>
           </div>
 
          
