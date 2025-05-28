@@ -31,7 +31,7 @@ export const RoadmapSection = () => {
     title: '2022 - 2023',
     date: '',
     year: '',
-    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: '/image1.png',
     status: 'completed',
     statusText: 'Завершено',
     description: '',
@@ -59,7 +59,7 @@ export const RoadmapSection = () => {
     title: '2024',
     date: '',
     year: '',
-    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: '/image2.png',
     status: 'completed',
     statusText: 'Завершено',
     description: '',
@@ -84,7 +84,7 @@ export const RoadmapSection = () => {
     title: '2025',
     date: '',
     year: '',
-    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: '/image3.png',
     status: 'in-progress',
     statusText: 'В работе',
     description: '',
@@ -109,7 +109,7 @@ export const RoadmapSection = () => {
     title: '2026',
     date: '',
     year: '',
-    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: '/image4.png',
     status: 'upcoming',
     statusText: 'В плане',
     description: '',
@@ -220,19 +220,19 @@ export const RoadmapSection = () => {
                   />
                 </div>
 
-                <div className="flex flex-col justify-center ">
+                <div className="flex flex-col justify-start ">
                   <div className="flex flex-col space-y-6">
                     <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full w-fit ${getStatusBadgeClass(item.status)}`}>
                       {item.statusText}
                     </span>
 
                     <div>
-                      <h2 className="text-base sm:text-xl font-bold ">{item.title}</h2>
+                      {/* <h2 className="text-base sm:text-xl font-bold ">{item.title}</h2> */}
                       <p className="text-gray-600">{item.year}</p>
                     </div>
 
                     <div>
-                      <h3 className="text-xl font-semibold mb-4">{item.description}</h3>
+                      <h3 className="text-xl font-semibold ">{item.description}</h3>
                       <ul className="space-y-4">
                         {item.features.map((feature, index) => (
                           <li key={index} className="flex flex-col items-start">

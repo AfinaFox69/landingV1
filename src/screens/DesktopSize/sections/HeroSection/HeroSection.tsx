@@ -7,12 +7,12 @@ import { BlurFade } from "../../../../components/magicui/blur-fade";
 
 export const HeroSection = (): JSX.Element => {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-dark bg-[url(/Background.svg)]">
+    <section className="relative w-full pt-24 overflow-hidden bg-dark bg-[url(/Background.svg)]">
       <div className="md:container mx-auto md:px-4">
-        <div className="relative h-full w-full">
-          <div className="flex flex-col lg:flex-row min-h-screen items-center justify-center bg-[url(/blur-gradient-1.svg)] bg-cover bg-center bg-no-repeat">
+        <div className="relative  w-full">
+          <div className="flex flex-col lg:flex-row  items-center justify-center bg-[url(/blur-gradient-1.svg)] bg-cover bg-center bg-no-repeat">
             {/* Left side - Text content */}
-            <div className="flex flex-col items-start gap-8 lg:gap-[52px] py-20 lg:py-0 text-center lg:text-left w-full lg:w-1/2">
+            <div className="flex flex-col items-start gap-8 lg:gap-[52px] py-20 lg:py-0 text-center lg:text-left  lg:w-[45%]">
               <div style={{ fontFamily: 'PT Sans' }} className="flex flex-col items-center lg:items-start gap-8 min-w-[100%]">
                 <h1 className="font-h2 text-4xl lg:text-[64px] text-white leading-tight">
                   <TypingAnimation className="font-h2 text-4xl lg:text-[64px] text-white leading-tight" delay={400} duration={100}>
@@ -37,77 +37,9 @@ export const HeroSection = (): JSX.Element => {
             </div>
 
             {/* Right side - UI Cards */}
-            <div className="hidden lg:flex flex-1 justify-center items-center relative">
-              <div className="grid grid-cols-2 gap-6 transform rotate-[-10deg] scale-90">
-                {/* Верхняя группа карточек */}
-                <div className="space-y-6">
-                  <Card className="w-[400px] bg-white rounded-xl p-4">
-                    <CardContent className="p-0">
-                      <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 bg-bluelight rounded-full flex items-center justify-center">
-                          <img src="/image-28.png" alt="Calendar" className="w-6 h-6" />
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-sm font-medium mb-1">Электронное расписание</h3>
-                          <p className="text-xs text-gray-600">Актуальное расписание занятий всегда под рукой</p>
-                        </div>
-                      </div>
-                      <Button className="mt-4 w-full bg-bluelight text-white rounded-full text-sm">Перейти</Button>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="w-[400px] bg-white rounded-xl p-4">
-                    <CardContent className="p-0">
-                      <div className="flex items-center gap-4">
-                        <Avatar className="w-10 h-10">
-                          <AvatarImage src="/image-31.png" />
-                          <AvatarFallback>СТ</AvatarFallback>
-                        </Avatar>
-                        <div className="flex-1">
-                          <h3 className="text-sm font-medium">Студент</h3>
-                          <p className="text-xs text-gray-600">Доступ к учебным материалам и сервисам</p>
-                        </div>
-                      </div>
-                      <Button className="mt-4 w-full bg-bluelight text-white rounded-full text-sm">Перейти</Button>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                {/* Нижняя группа карточек */}
-                <div className="space-y-6 mt-12">
-                  <Card className="w-[400px] bg-white rounded-xl p-4">
-                    <CardContent className="p-0">
-                      <div className="flex items-center gap-4">
-                        <Avatar className="w-10 h-10">
-                          <AvatarImage src="/image-23.png" />
-                          <AvatarFallback>ПР</AvatarFallback>
-                        </Avatar>
-                        <div className="flex-1">
-                          <h3 className="text-sm font-medium">Преподаватель</h3>
-                          <p className="text-xs text-gray-600">Управление учебным процессом</p>
-                        </div>
-                      </div>
-                      <Button className="mt-4 w-full bg-bluelight text-white rounded-full text-sm">Перейти</Button>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="w-[400px] bg-white rounded-xl p-4">
-                    <CardContent className="p-0">
-                      <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 bg-bluelight rounded-full flex items-center justify-center">
-                          <img src="/search-job-6617229-5501752-1.png" alt="Search" className="w-6 h-6" />
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-sm font-medium">Поиск работы</h3>
-                          <p className="text-xs text-gray-600">Вакансии для студентов и выпускников</p>
-                        </div>
-                      </div>
-                      <Button className="mt-4 w-full bg-bluelight text-white rounded-full text-sm">Перейти</Button>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
+            <BlurFade delay={5.9} inView className=" lg:w-[55%] !h-full">
+            <img src={"/imgInterfacePieces.png"} alt="UI Cards"  />
+            </BlurFade>
           </div>
         </div>
       </div>

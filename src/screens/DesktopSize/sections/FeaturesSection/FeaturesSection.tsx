@@ -7,6 +7,7 @@ import { HyperText } from '../../../../components/magicui/hyper-text';
 interface SlideData {
   id: string;
   title: string;
+  image: any;
   content: React.ReactNode;
 }
 
@@ -16,6 +17,7 @@ export const FeaturesSection: React.FC = () => {
     {
       id: 'bilingual',
       title: 'Двуязычность',
+      image: '/image5.png',
       content: (
         <div className="fade-in">
           <h2 className="text-2xl font-bold mb-6">Двуязычность</h2>
@@ -42,6 +44,7 @@ export const FeaturesSection: React.FC = () => {
     {
       id: 'messenger',
       title: 'Мессенджер',
+      image: '/image7.png',
       content: (
         <div className="fade-in">
           <h2 className="text-2xl font-bold mb-6">Мессенджер</h2>
@@ -63,6 +66,7 @@ export const FeaturesSection: React.FC = () => {
     {
       id: 'teacher',
       title: 'Преподавателю',
+      image: '/image8.png',
       content: (
         <div className="fade-in">
           <h2 className="text-2xl font-bold mb-6">Преподавателю</h2>
@@ -86,6 +90,7 @@ export const FeaturesSection: React.FC = () => {
     {
       id: 'practices',
       title: 'Практики студентов',
+      image: '/image9.png',
       content: (
         <div className="fade-in">
           <h2 className="text-2xl font-bold mb-6">Практики студентов</h2>
@@ -109,6 +114,7 @@ export const FeaturesSection: React.FC = () => {
     {
       id: 'employment',
       title: 'Трудоустройство',
+      image: '/image10.png',
       content: (
         <div className="fade-in">
           <h2 className="text-2xl font-bold mb-6">Трудоустройство</h2>
@@ -138,6 +144,7 @@ export const FeaturesSection: React.FC = () => {
     {
       id: 'about',
       title: 'Обо мне',
+      image: '/image11.png',
       content: (
         <div className="fade-in">
           <h2 className="text-2xl font-bold mb-6">Обо мне</h2>
@@ -161,6 +168,7 @@ export const FeaturesSection: React.FC = () => {
     {
       id: 'credit',
       title: 'Зачётка',
+      image: '/image12.png',
       content: (
         <div className="fade-in">
           <h2 className="text-2xl font-bold mb-6">Зачётка</h2>
@@ -184,7 +192,7 @@ export const FeaturesSection: React.FC = () => {
     {
       id: 'session',
       title: 'Сессия',
-    
+      image: '/image13.png',
       content: (
         <div className="fade-in">
           <h2 className="text-2xl font-bold mb-6">Сессия</h2>
@@ -206,6 +214,7 @@ export const FeaturesSection: React.FC = () => {
     {
       id: 'schedule',
       title: 'Расписание',
+      image: '/image14.png',
       content: (
         <div className="fade-in">
           <h2 className="text-2xl font-bold mb-6">Расписание</h2>
@@ -224,6 +233,7 @@ export const FeaturesSection: React.FC = () => {
     {
       id: 'tabel',
       title: 'Табель УРВ',
+      image: '/image15.png',
       content: (
         <div className="fade-in">
           <h2 className="text-2xl font-bold mb-6">Табель УРВ</h2>
@@ -245,6 +255,7 @@ export const FeaturesSection: React.FC = () => {
      {
       id: 'vacation',
       title: 'Отпуск',
+      image: '/image16.png',
       content: (
         <div className="fade-in">
           <h2 className="text-2xl font-bold mb-6">Отпуск</h2>
@@ -316,7 +327,7 @@ export const FeaturesSection: React.FC = () => {
             <div className="text-center text-gray-500 p-8">
               <div className="text-5xl mb-4">
               </div>
-              <p className="text-lg">Визуализация для "{currentSlide.title}"</p>
+              <img src={currentSlide.image} alt="Image" className="w-full h-full object-cover" />
             </div>
           </div>
 
