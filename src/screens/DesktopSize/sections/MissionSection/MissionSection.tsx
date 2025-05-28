@@ -16,19 +16,27 @@ export const MissionSection = (): JSX.Element => {
             <div className="relative h-[280px] md:h-[448px] -top-[37px]">
               {/* Right avatar */}
               <div
-                className=" hidden md:block absolute w-96 h-96 top-[50px] left-[376px] bg-[#e0ecfe] rounded-[192px] bg-cover bg-center blur-sm"
+                className="opacity-[70%] hidden md:block absolute w-96 h-96 top-[50px] left-[376px] bg-[#e0ecfe] rounded-[192px] bg-cover bg-center blur-sm"
                 style={{ backgroundImage: "url(/imgavatarright.png)" }}
               />
 
               {/* Left avatar */}
               <div
-                className="hidden md:block absolute w-96 h-96 top-[50px] left-0 bg-[#e0ecfe] rounded-[192px] bg-cover bg-center blur-sm"
+                className="opacity-[70%] hidden md:block absolute w-96 h-96 top-[50px] left-0 bg-[#e0ecfe] rounded-[192px] bg-cover bg-center blur-sm"
                 style={{ backgroundImage: "url(/imgavatarleft.png)" }}
               />
 
               {/* Mobile avatars */}
+               <div
+                className="opacity-[70%]  md:hidden absolute w-[60%] h-[60%] top-[20px] left-0 bg-[#e0ecfe] rounded-[192px] bg-cover bg-center blur-sm"
+                style={{ backgroundImage: "url(/imgavatarleft.png)" }}
+              />
               <div
                 className="md:hidden w-48 h-48 mx-auto bg-[#e0ecfe] rounded-full bg-cover bg-center"
+                style={{ backgroundImage: "url(/imgavatarright.png)" }}
+              />
+                <div
+                className="opacity-[70%]  md:hidden absolute w-[60%] h-[60%] top-[20px] left-[130px] bg-[#e0ecfe] rounded-[192px] bg-cover bg-center blur-sm"
                 style={{ backgroundImage: "url(/imgavatarright.png)" }}
               />
 
