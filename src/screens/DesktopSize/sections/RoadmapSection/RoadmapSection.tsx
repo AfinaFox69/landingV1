@@ -174,12 +174,12 @@ export const RoadmapSection = () => {
                       ? 'bg-[#65A1FA] scale-110' 
                       : index < currentIndex 
                         ? 'bg-[#D1E3FE]' 
-                        : 'bg-gray-200'
+                        : 'bg-[#c4dcff]'
                   }`}
                 />
                 <div className="mt-4 text-center">
-                  <p className={`font-medium transition-all duration-300 ${
-                    index === currentIndex ? 'text-black' : 'text-gray-500'
+                  <p   style={{ fontFamily: 'PT Sans' }}  className={`font-medium transition-all duration-300 ${
+                    index === currentIndex ? 'text-black ' : 'text-gray-500'
                   }`}>
                     {item.title}
                   </p>
@@ -242,8 +242,8 @@ export const RoadmapSection = () => {
                             <span className="text-lg font-semibold mb-1">{feature.title}</span>
                             {feature.description.map((desc, descIndex) => (
                               <div key={descIndex} className="flex items-start">
-                               <div className='h-[22px] flex items-center'> <span className="inline-block w-1 h-1 m-1 bg-black rounded-full "></span></div>
-                                <span>{desc}</span>
+                               <div className='h-[22px] flex items-center'> <span className="inline-block w-1 h-1 m-1 bg-black rounded-full mr-2"></span></div>
+                                <span  style={{ fontFamily: 'PT Sans' }} >{desc}</span>
                               </div>
                             ))}
                           </li>
