@@ -15,7 +15,7 @@ export const StatisticsSection = (): JSX.Element => {
   return (
     <section className="w-full py-10 md:py-[120px] bg-graybluelightbg rounded-[20px]">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-x-16 md:gap-y-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-x-16 md:gap-y-16" >
           {statisticsData.map((stat, index) => {
             // На мобильных и планшетах — центрируем все
             // На lg — применяем выравнивание по колонкам

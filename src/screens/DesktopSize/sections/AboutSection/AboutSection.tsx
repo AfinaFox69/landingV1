@@ -5,7 +5,7 @@ import { BlurFade } from "../../../../components/magicui/blur-fade";
 export const AboutSection = (): JSX.Element => {
   return (
     <BlurFade  delay={0.5} inView>
-    <section id="about" className="flex justify-center py-12 md:py-20  w-full px-4 md:px-6">
+    <section id="about" className="flex justify-center mt-14 py-12 md:py-20  w-full px-4 md:px-6 mb-5" >
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-16 max-w-7xl">
         <div className="w-full md:w-1/2 flex justify-center">
            <img

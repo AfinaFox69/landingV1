@@ -5,10 +5,16 @@ import { defineConfig } from "vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "./",
+  // Уберите base: "./" для Vercel
+  // base: "./", 
   css: {
     postcss: {
       plugins: [tailwind()],
     },
+  },
+  // Добавьте настройки для статических файлов
+  publicDir: 'public',
+  build: {
+    assetsDir: 'assets',
   },
 });
