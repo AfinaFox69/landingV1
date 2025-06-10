@@ -4,7 +4,7 @@ import { NumberTicker } from "../../../../components/magicui/number-ticker";
 
 export const StatisticsSection = (): JSX.Element => {
   const statisticsData = [
-    { value: "450+", description: "Виртуальных серверов" },
+    { value: "450 +", description: "Виртуальных серверов" },
     { value: "25+", description: "Информационных систем" },
     { value: "800+", description: "Активных сетевых устройств" },
     { value: "80+", description: "Физических сервера" },
@@ -13,8 +13,8 @@ export const StatisticsSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="w-full py-10 md:py-[120px] bg-graybluelightbg rounded-[20px]">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="w-full  py-5 md:py-[60px]  rounded-[20px] mb-20">
+      <div className="container    bg-graybluelightbg  rounded-[20px] !p-24"  >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-x-16 md:gap-y-16" >
           {statisticsData.map((stat, index) => {
             // На мобильных и планшетах — центрируем все
@@ -29,12 +29,14 @@ export const StatisticsSection = (): JSX.Element => {
               <Card key={index} className={`border-none bg-transparent shadow-none ${justifyClass}`}>
                 <CardContent className="p-0">
                   <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
-                    <h2 className="font-h1 text-5xl md:text-[100px] text-dark leading-tight">
+                    <h2 className="font-h1 text-5xl md:text-[100px] text-dark leading-tight flex items-baseline">
                       <NumberTicker
+                       
                         // @ts-ignore
-                        value={stat?.value}
-                        className="whitespace-pre-wrap text-8xl font-medium tracking-tighter text-black dark:text-white"
+                        value={parseInt(stat?.value)}
+                        className="whitespace-pre-wrap text-8xl font-semibold tracking-tighter text-black dark:text-white"
                       />
+                      <span className=" text-5xl md:text-[64px] ml-1 text-black dark:text-white">+</span>
                     </h2>
                     <p className="font-['PT_Sans',Helvetica] font-normal text-bwbw-6 text-lg md:text-xl leading-[30px]">
                       {stat.description}

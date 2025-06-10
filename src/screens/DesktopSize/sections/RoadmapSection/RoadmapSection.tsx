@@ -3,6 +3,7 @@ import { Carousel } from 'antd';
 import { CarouselRef } from 'antd/es/carousel';
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { HyperText } from '../../../../components/magicui/hyper-text';
+import { BlurFade } from '../../../../components/magicui/blur-fade';
 
 interface Feature {
   title: string;
@@ -153,10 +154,12 @@ export const RoadmapSection = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12 "  id="roadmap" >
+    <div className="container  sm:p-0"  id="roadmap" >
        <h2 className="font-h3 text-dark text-3xl md:text-[42px] font-bold text-center leading-[140%] mb-[50px]">
             
-             <HyperText startOnView className="font-h3 text-dark text-3xl md:text-[42px] font-bold text-center leading-[140%] mb-[50px]">Этапы развития проекта</HyperText>
+             <BlurFade delay={0.5} inView>
+              Этапы развития проекта
+              </BlurFade>
           </h2>
       {/* Timeline indicator */}
       <div className="w-full mb-8 ">
@@ -211,7 +214,7 @@ export const RoadmapSection = () => {
         >
           {items.map((item) => (
             <div key={item.id}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
                 <div className="rounded-xl overflow-hidden bg-black/5 flex items-center justify-center">
                   <img 
                     src={item.image} 
