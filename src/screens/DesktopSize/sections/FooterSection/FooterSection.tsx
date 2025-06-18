@@ -131,7 +131,7 @@ export const FooterSection = (): JSX.Element => {
           {/* Right Column */}
           <div className="flex flex-col gap-8 md:gap-0 md:justify-between md:h-[267px]">
             <div className="flex flex-col gap-6 md:gap-[52px]">
-              <h4 className="font-h4 text-xl md:text-[32px] text-dark">
+              <h4 style={{ fontFamily: 'PT Sans' }} className="font-h4 text-xl md:text-[32px] text-dark font-bold">
                 Связаться с нами
               </h4>
 
@@ -139,22 +139,22 @@ export const FooterSection = (): JSX.Element => {
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex flex-col gap-3">
                     {info.email && (
-                      <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
+                      <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
                         {info.email}
                       </p>
                     )}
                     {info.phone && (
-                      <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-base leading-[30px]">
+                      <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-base leading-[30px]">
                         {info.phone}
                       </p>
                     )}
                     {info.address && (
-                      <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
+                      <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
                         {info.address}
                       </p>
                     )}
                     {info.hours && (
-                      <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
+                      <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
                         {info.hours}
                       </p>
                     )}

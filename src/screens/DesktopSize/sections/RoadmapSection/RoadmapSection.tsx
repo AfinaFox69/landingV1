@@ -155,7 +155,7 @@ export const RoadmapSection = () => {
 
   return (
     <div className="container  sm:p-0"  id="roadmap" >
-       <h2 className="font-h3 text-dark text-3xl md:text-[42px] font-bold text-center leading-[140%] mb-[50px]">
+       <h2 className="font-h3 text-dark text-3xl md:text-[42px] font-bold text-center leading-[140%] mb-[53px]">
             
              <BlurFade delay={0.5} inView>
               Этапы развития проекта

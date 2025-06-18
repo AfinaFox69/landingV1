@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, ConfigProvider } from 'antd';
 import { Globe, BookOpen, Users, Briefcase, User, CheckSquare, Calendar, ClipboardList, Table, Clock } from 'lucide-react';
 import { HyperText } from '../../../../components/magicui/hyper-text';
+import { BlurFade } from '../../../../components/magicui/blur-fade';
 
 // Определение типа данных для слайда
 interface SlideData {
@@ -284,6 +285,8 @@ export const FeaturesSection: React.FC = () => {
     setActiveSlide(slideId);
   };
 
+  
+
   // Находим текущий слайд для отображения
   const currentSlide = slides.find((slide) => slide.id === activeSlide) || slides[0];
 
@@ -298,11 +301,13 @@ export const FeaturesSection: React.FC = () => {
     >
        <h2 className="w-full font-h4 text-2xl md:text-[42px] text-dark text-center font-bold leading-[140%] mb-[40px] mt-[100px]">
           
-          <HyperText startOnView className="w-full font-h4 text-2xl md:text-[42px] text-dark text-center font-bold leading-[140%] mb-[40px] mt-[100px]">Реализованные фичи</HyperText>
+      <BlurFade delay={0.5} inView>
+            Реализованные фичи
+            </BlurFade>
         </h2>
-      <div id="features" className="max-w-7xl mx-auto px-4 py-6">
+      <div id="features" className="max-w-7xl mx-auto px-4  pt-[13px] ">
         {/* Навигационные кнопки */}
-        <div className="flex flex-wrap gap-2 mb-8 " style={{ fontFamily: 'PT Sans' }}>
+        <div className="flex flex-wrap gap-2 mb-[38px] " style={{ fontFamily: 'PT Sans' }}>
           {slides.map((slide) => (
             <Button
               key={slide.id}
@@ -311,7 +316,7 @@ export const FeaturesSection: React.FC = () => {
               className={` border-1 border-solid border-black p-2 text-sm transition-all duration-300 rounded-full  h-full flex items-center ${
                 
                 activeSlide === slide.id
-                  ? 'bg-[#3073D7] text-white'
+                  ? 'bg-[#3073D7] text-white border-transparent'
                   : 'hover:bg-gray-100'
               }`}
             >
@@ -321,10 +326,10 @@ export const FeaturesSection: React.FC = () => {
         </div>
 
         {/* Контейнер для слайдов */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-50 rounded-lg p-6 shadow-sm min-h-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-50 rounded-lg   min-h-[400px]">
           {/* Левая часть - изображение (заглушка) */}
           <div className="flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
-            <div className="text-center text-gray-500 p-8">
+            <div className="text-center text-gray-500">
               <div className="text-5xl mb-4">
               </div>
               <img src={currentSlide.image} alt="Image" className="w-full h-full object-cover" />
@@ -332,7 +337,7 @@ export const FeaturesSection: React.FC = () => {
           </div>
 
           {/* Правая часть - контент */}
-          <div className="flex flex-col justify-center " style={{ fontFamily: 'PT Sans' }}>
+          <div className="flex flex-col justify-start mt-5 " style={{ fontFamily: 'PT Sans' }}>
             {currentSlide.content}
           </div>
         </div>

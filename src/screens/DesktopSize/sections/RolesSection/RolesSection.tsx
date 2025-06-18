@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 import {  StarFilled   } from '@ant-design/icons';
 import { HyperText } from "../../../../components/magicui/hyper-text";
+import { BlurFade } from "../../../../components/magicui/blur-fade";
 
 export const RolesSection = (): JSX.Element => {
   // Data for role cards to enable mapping
@@ -81,7 +82,9 @@ export const RolesSection = (): JSX.Element => {
       <div className="flex flex-col items-start gap-8 md:gap-[52px] w-full container mx-auto px-4">
         <h2 className="w-full font-h4 text-2xl md:text-[42px] text-dark text-center font-bold leading-[140%] md:mb-[40px]">
           
-          <HyperText startOnView={true} className="w-full font-h4 text-2xl md:text-[42px] text-dark text-center font-bold leading-[140%] mb-[40px]">Ролевая модель</HyperText>
+         <BlurFade delay={0.5} inView>
+            Ролевая модель
+            </BlurFade>
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-16 w-full ">
@@ -95,16 +98,17 @@ export const RolesSection = (): JSX.Element => {
                     src={role.image}
                   />
                   <CardContent className="p-0">
-                    <h3 className="w-full font-h4 text-xl md:text-[32px] text-dark text-center mb-6 md:mb-[85px]">
+                    <h3 className="w-full font-h4 text-xl md:text-[32px] text-dark text-center mb-[40px] md:mb-[40px]">
                       {role.title}
                     </h3>
                     <div className="opacity-80 font-t3 text-sm md:text-sm text-dark space-y-2">
                       {role.description.map((item, index) => (
                         <React.Fragment key={index} >
-                          <div className="flex items-center gap-3 ">
+                          <div className="flex  gap-3 ">
                             {/* <div className=" !w-[3px] !h-[3px]   bg-black  rounded-[50%]"></div> */}
-                            <StarFilled className="w-[8px] "/>
-                            {item}
+                            <div className="!w-[8px] h-[8px] pt-2"><img className="!w-[4px] !h-[4px]" src='https://iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-circle-1.png'/></div>
+                            {/* <StarFilled className="w-[8px] "/> */}
+                            <div>{item}</div>
                           </div>
                          
                         </React.Fragment>

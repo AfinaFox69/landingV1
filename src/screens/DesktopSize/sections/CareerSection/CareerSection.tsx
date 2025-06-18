@@ -4,38 +4,36 @@ import { Card, CardContent } from "../../../../components/ui/card";
 
 export const CareerSection = (): JSX.Element => {
   return (
-    <section id="career" className="w-full py-8 md:py-16">
+    <section id="career" className="w-full py-[130px] md:pt-[130px]">
       <div className="container mx-auto px-4 md:px-6">
         <Card className="relative w-full bg-bluelight rounded-[20px] overflow-hidden">
           <CardContent className="flex flex-col md:flex-row p-0 w-full">
-            <div className="flex flex-col py-8 md:py-[100px] px-6 md:pl-[148px] md:pr-10 relative z-10 md:w-[60%]" style={{ fontFamily: 'PT Sans' }}>
+            <div
+              className="flex flex-col py-8 md:py-[100px] px-6 md:pl-[148px] md:pr-10 relative z-10 md:w-[60%]"
+              style={{ fontFamily: "PT Sans" }}>
               <div className="max-w-full md:max-w-[701px]">
-                <h3 className="font-h3 md:text-[36px] text-white leading-[140%] mb-6 md:mb-10 text-bold">
+                <h3 className="font-h3 md:text-[36px] text-white leading-[140%] mb-6 md:mb-10 font-extrabold ">
                   Мечтаешь о карьере в IT?
                 </h3>
 
                 <p className="text-white text-base md:text-xl leading-relaxed mb-6 md:mb-10 max-w-prose">
-                  <span className="block mb-2 text-base font-medium">
+                  <span className="text-base font-medium">
                     Хочешь получить реальный опыт работы, который выделит тебя
                     среди других выпускников?
-                  </span>
-
-                  <span className="block mb-2 text-base">
+                  </span>{" "}
+                  <span className="text-base !text-[#FFFFFF] font-bold">
                     Департамент информатизации и связи приглашает тебя на
                     стажировку!
-                  </span>
-
-                  <span className="block text-base">
+                  </span>{" "}
+                  <span className="text-base">
                     Ты получишь возможность работать над реальными проектами,
                     учиться у профессионалов и видеть изнутри, как работает IT.
                     Подай заявку прямо сейчас и начни строить своё будущее!
                   </span>
                 </p>
 
-                <Button className="animate-bounce w-full md:w-auto rounded-[30px] bg-white text-bluedark hover:bg-white/90 px-6 md:px-[37px] py-[15px] h-[50px]">
-                  <span className="font-t3-bold">
-                    Подать заявку
-                  </span>
+                <Button className=" w-full md:w-auto rounded-[30px] bg-white text-bluedark hover:bg-white/90  md:px-[37px] py-[25px] mt-[13px] h-[50px]">
+                  <span className="font-t3-bold">Подать заявку</span>
                 </Button>
               </div>
             </div>

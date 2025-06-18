@@ -2,12 +2,13 @@ import React from "react";
 
 export const MissionSection = (): JSX.Element => {
   return (
-    <section className="w-full py-8 md:py-16">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="w-full py-8 md:py-[100px]">
+      <div className="container mx-auto px-4 md:px-6 md:pt-[75px]">
         <div className="flex flex-col items-center gap-12 md:gap-24">
-          <h2 className="text-center font-h3 text-2xl md:text-[42px] leading-[140%] tracking-[0] max-w-[1000px] mb-[40px]">
+          <h2 className="text-center font-h3 text-2xl md:text-[42px] leading-[140%] tracking-[0] max-w-[1000px] ">
             <span className="text-black font-bold">Цель разработки: внедрение принципа </span>
-            <span className="text-[#3073d6]">
+            <br></br>
+            <span className="text-[#3073d6] text-4xl font-bold">
               «Одно физическое лицо — одна учётная запись»
             </span>
           </h2>
@@ -16,13 +17,13 @@ export const MissionSection = (): JSX.Element => {
             <div className="relative h-[280px] md:h-[448px] -top-[37px]">
               {/* Right avatar */}
               <div
-                className="opacity-[70%] hidden md:block absolute w-96 h-96 top-[50px] left-[376px] bg-[#e0ecfe] rounded-[192px] bg-cover bg-center blur-sm"
+                className="opacity-[70%] hidden md:block absolute w-96 h-96 top-[50px] left-[376px] bg-[#e0ecfe] rounded-[192px] bg-cover bg-center blur-[1px]"
                 style={{ backgroundImage: "url(/imgavatarright.png)" }}
               />
 
               {/* Left avatar */}
               <div
-                className="opacity-[70%] hidden md:block absolute w-96 h-96 top-[50px] left-0 bg-[#e0ecfe] rounded-[192px] bg-cover bg-center blur-sm"
+                className="opacity-[70%] hidden md:block absolute w-96 h-96 top-[50px] left-0 bg-[#e0ecfe] rounded-[192px] bg-cover bg-center blur-[1px]"
                 style={{ backgroundImage: "url(/imgavatarleft.png)" }}
               />
 
