@@ -7,28 +7,28 @@ import { BlurFade } from "../../../../components/magicui/blur-fade";
 const goalsData = [
   {
     id: 1,
-    icon: "/group-5.png",
+    icon: "/group-5.svg",
     title: "Объединение",
     description:
       "Перейти от подхода множественности личных кабинетов к единой учётной записи с ролевым распределением",
   },
   {
     id: 2,
-    icon: "/group-6.png",
+    icon: "/group-6.svg",
     title: "Новый стек",
     description:
       "Перенести ИАС «Электронный университет» на новый технологический стек, с частичным сохранением баз данных на Oracle",
   },
   {
     id: 3,
-    iconType: "flame",
+    icon: "/flameSvg.svg",
     title: "Новый дизайн",
     description:
       "Разработать крутой дизайн, чтобы юзеры не грустили: сделать интерфейс удобным и интуитивно понятным на всех девайсах, браузерах и языках",
   },
   {
     id: 4,
-    icon: "/group-7.png",
+    icon: "/group-7.svg",
     title: "Цифровизация",
     description:
       "Разработать новые HR-сервисы: трудоустройство, кадровый учёт, учёт рабочего времени и другие сервисы, которые упрощают взаимодействие HR с сотрудниками",
@@ -55,9 +55,7 @@ export const GoalsSection = (): JSX.Element => {
               >
                 <CardContent className="flex flex-col items-start gap-[5px] md:gap-[52px] p-10 md:p-[52px]">
                   <div className="relative w-[60px] h-[60px]">
-                    {goal.iconType === "flame" ? (
-                      <FlameIcon className="w-[50px] h-[50px] text-blue-600 " />
-                    ) : (
+                    { (
                       <img
                         className="absolute w-[50px] h-[50px] top-[5px] left-[5px]"
                         alt={`${goal.title} icon`}

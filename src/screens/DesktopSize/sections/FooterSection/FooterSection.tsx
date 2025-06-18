@@ -24,7 +24,7 @@ export const FooterSection = (): JSX.Element => {
             <div className="flex flex-col md:flex-row gap-8 md:gap-20">
               {/* First Logo */}
               <div className="relative w-[268px] h-[54px]">
-                <img
+                {/* <img
                   className="absolute w-[11px] h-[37px] top-4 left-[171px]"
                   alt="Vector"
                   src="/vector.svg"
@@ -85,12 +85,13 @@ export const FooterSection = (): JSX.Element => {
                   className="absolute w-[11px] h-[11px] top-px left-[171px]"
                   alt="Vector"
                   src="/vector-4.svg"
-                />
+                /> */}
+                <img src='logoDistricked.svg' alt='flameSvg' />
               </div>
 
               {/* Second Logo */}
               <div className=" hidden md:flex relative w-[334.31px] h-[68px]">
-                <div className=" absolute w-[233px] h-[63px] top-0.5 left-[102px]">
+                {/* <div className=" absolute w-[233px] h-[63px] top-0.5 left-[102px]">
                   <img
                     className=" absolute w-[152px] h-[49px] top-[7px] left-[81px]"
                     alt="Group"
@@ -118,7 +119,8 @@ export const FooterSection = (): JSX.Element => {
                   className="absolute w-px h-[66px] top-px left-[79px]"
                   alt="Vector"
                   src="/vector-3.svg"
-                />
+                /> */}
+                <img src='logoDISKFU.svg' alt='flameSvg' />
               </div>
             </div>
 

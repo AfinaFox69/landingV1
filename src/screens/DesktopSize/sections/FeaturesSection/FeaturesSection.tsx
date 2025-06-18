@@ -284,6 +284,7 @@ export const FeaturesSection: React.FC = () => {
   const handleSlideChange = (slideId: string) => {
     setActiveSlide(slideId);
   };
+  
 
   
 
