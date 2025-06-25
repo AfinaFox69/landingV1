@@ -106,7 +106,7 @@ export const RolesSection = (): JSX.Element => {
                         <React.Fragment key={index} >
                           <div className="flex  gap-3 ">
                             {/* <div className=" !w-[3px] !h-[3px]   bg-black  rounded-[50%]"></div> */}
-                            <div className="!w-[8px] h-[8px] pt-2"><img className="!w-[4px] !h-[4px]" src='https://iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-circle-1.png'/></div>
+                            <div className="!min-w-[8px] h-[8px] pt-2 "><img className="!w-[4px] !h-[4px]" src='https://iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-circle-1.png'/></div>
                             {/* <StarFilled className="w-[8px] "/> */}
                             <div>{item}</div>
                           </div>

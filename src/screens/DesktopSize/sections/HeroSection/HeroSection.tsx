@@ -13,11 +13,11 @@ export const HeroSection = (): JSX.Element => {
               <BlurFade delay={0.5}>
                 <div style={{ fontFamily: "PT Sans" }} className="flex flex-col items-center lg:items-start gap-8 min-w-[100%] ">
                   <h1 className="font-h2 text-4xl lg:text-[64px] text-white  ">
-                    <div className="sm:mb-8  text-sm lg:text-[54px] text-white ">Единый</div>
-                    <div className="font-h2 text-sm sm:text-[54px]  text-white ">личный кабинет</div>
+                    <div className="sm:mb-8  text-sm lg:text-[54px] text-white font-bold">Единый</div>
+                    <div className="font-h2 text-sm sm:text-[54px]  text-white font-bold">личный кабинет</div>
                   </h1>
-                  <p className="text-white text-lg lg:text-xl leading-relaxed max-w-[529px]">
-                    <div className="text-white text-xs sm:text-lg leading-relaxed max-w-[529px] font-light">
+                  <p className="text-white text-lg lg:text-xl leading-relaxed max-w-[529px] pt-2 flex justify-center">
+                    <div className="text-white text-xs sm:text-lg leading-relaxed max-w-[70%] sm:max-w-[529px] font-light">
                       Цифровая платформа, которая упрощает взаимодействие студентов с университетом и образовательными ресурсами
                     </div>
                   </p>
@@ -25,7 +25,7 @@ export const HeroSection = (): JSX.Element => {
               </BlurFade>
 
               <BlurFade className="w-full" delay={0.5}>
-                <Button className="hover:bg-white hover:text-black w-[50%] md:w-full lg:w-64 px-[37px] py-[15px] bg-bluebright rounded-[30px] font-t3-bold text-white">
+                <Button className="hover:bg-white hover:text-black w-[50%] md:w-full lg:w-64 px-[37px] py-[15px] bg-bluebright rounded-[30px] font-t3-bold text-white h-[42px]">
                   Начать работу
                 </Button>
               </BlurFade>

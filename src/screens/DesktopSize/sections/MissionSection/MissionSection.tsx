@@ -6,9 +6,9 @@ export const MissionSection = (): JSX.Element => {
       <div className="container mx-auto px-4 md:px-6 md:pt-[75px]">
         <div className="flex flex-col items-center gap-12 md:gap-24">
           <h2 className="text-center font-h3 text-2xl md:text-[42px] leading-[140%] tracking-[0] max-w-[1000px] ">
-            <span className="text-black font-bold">Цель разработки: внедрение принципа </span>
+            <span className="text-black font-bold text-sm sm:text-4xl">Цель разработки: внедрение принципа </span>
             <br></br>
-            <span className="text-[#3073d6] text-4xl font-bold">
+            <span className="text-[#3073d6] text-sm sm:text-4xl font-bold">
               «Одно физическое лицо — одна учётная запись»
             </span>
           </h2>
