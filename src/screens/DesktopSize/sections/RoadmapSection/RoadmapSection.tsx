@@ -164,7 +164,7 @@ export const RoadmapSection = () => {
       {/* Timeline indicator */}
       <div className="w-full mb-8 ">
         <div className="relative">
-          <div className="border-[1px] absolute top-[20%] left-0 right-0 h-0.5 bg-gray-400 -translate-y-1/2"></div>
+          <div className="border-[1px] absolute top-[20%] left-0 right-0 h-0.5 !bg-[#65A1FA] -translate-y-1/2"></div>
           <div className="relative flex justify-between items-center ">
             {items.map((item, index) => (
               <div key={item.id} className="flex flex-col items-center">
@@ -178,7 +178,7 @@ export const RoadmapSection = () => {
                   }`}
                 />
                 <div className="mt-4 text-center">
-                  <p   style={{ fontFamily: 'PT Sans' }}  className={`font-medium transition-all duration-300 ${
+                  <p   style={{ fontFamily: 'PT Sans' }}  className={` sm:w-auto font-medium transition-all duration-300 ${
                     index === currentIndex ? 'text-black ' : 'text-gray-500'
                   }`}>
                     {item.title}
@@ -200,7 +200,7 @@ export const RoadmapSection = () => {
         {/* Navigation buttons */}
         <button
           onClick={goToPrev}
-          className="absolute left-4 top-[22%] md:top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md transition-all hover:bg-gray-100 hover:shadow-lg focus:outline-none"
+          className="absolute left-4 top-[17%] md:top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md transition-all hover:bg-gray-100 hover:shadow-lg focus:outline-none"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6 text-gray-700" />
@@ -219,7 +219,7 @@ export const RoadmapSection = () => {
                   <img 
                     src={item.image} 
                     alt={item.title} 
-                    className="w-full h-[400px] object-cover transition-transform duration-700 hover:scale-105"
+                    className="w-full max-h-[530px] object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
 
@@ -280,7 +280,7 @@ export const RoadmapSection = () => {
 
         <button
           onClick={goToNext}
-          className="absolute right-4  top-[22%] md:top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md transition-all hover:bg-gray-100 hover:shadow-lg focus:outline-none"
+          className="absolute right-4  top-[17%] md:top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md transition-all hover:bg-gray-100 hover:shadow-lg focus:outline-none"
           aria-label="Next slide"
         >
           <ChevronRight className="w-6 h-6 text-gray-700" />

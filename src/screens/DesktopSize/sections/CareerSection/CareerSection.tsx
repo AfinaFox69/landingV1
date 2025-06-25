@@ -13,7 +13,7 @@ export const CareerSection = (): JSX.Element => {
               className="flex flex-col py-8 md:py-[100px] px-6 md:pl-[148px] md:pr-10 relative z-10 md:w-[60%]"
               style={{ fontFamily: "PT Sans" }}>
               <div className="max-w-full md:max-w-[701px]">
-                <h3 className="font-h3 md:text-[36px] text-white leading-[140%] mb-6 md:mb-10 font-extrabold ">
+                <h3 className="font-h3 text-4xl md:text-[36px] text-white leading-[140%] mb-6 md:mb-10 font-extrabold ">
                   Мечтаешь о карьере в IT?
                 </h3>
 

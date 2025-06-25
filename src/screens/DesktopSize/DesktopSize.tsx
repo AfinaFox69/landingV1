@@ -55,7 +55,7 @@ export const DesktopSize = (): JSX.Element => {
 
   return (
     <div className=" flex flex-col items-center w-full">
-      <header className={`backdrop-blur-md w-full fixed top-0 z-50 transition-all duration-300 ease-in-out ${
+      <header className={`backdrop-blur-md w-full fixed pt-[3px] pb-[2px] top-0 z-50 transition-all duration-300 ease-in-out ${
         isScrolled ? 'bg-black/70 md:backdrop-blur-md' : 'bg-transparent'
       }`}>
         <div className=" container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center ">
@@ -89,7 +89,7 @@ export const DesktopSize = (): JSX.Element => {
                       smooth={true}
                       offset={-100}
                       duration={500}
-                      className="font-t2 text-white text-xl leading-5 cursor-pointer font-bold">
+                      className=" text-white text-[18px] leading-5 cursor-pointer ">
                       {item.label}
                     </Link>
                   </NavigationMenuItem>
@@ -121,7 +121,7 @@ export const DesktopSize = (): JSX.Element => {
                         smooth={true}
                         offset={-100}
                         duration={500}
-                        className="text-white text-3xl font-t2 block py-2 cursor-pointer"
+                        className="text-white text-[26px] sm:text-3xl font-t2 block py-2 cursor-pointer"
                         onClick={() => setIsMenuOpen(false)}>
                         {item.label}
                       </Link>

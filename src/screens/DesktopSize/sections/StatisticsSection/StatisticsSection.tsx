@@ -36,7 +36,7 @@ export const StatisticsSection = (): JSX.Element => {
                         value={parseInt(stat?.value)}
                         className="whitespace-pre-wrap text-8xl font-semibold tracking-tighter text-black dark:text-white"
                       />
-                      <span className=" text-5xl md:text-[64px] ml-1 text-black dark:text-white">+</span>
+                      <span className=" text-5xl md:text-[64px] ml-1 text-black dark:text-white font-bold">+</span>
                     </h2>
                     <p className="font-['PT_Sans',Helvetica] font-normal text-bwbw-6 text-lg md:text-xl leading-[30px]">
                       {stat.description}

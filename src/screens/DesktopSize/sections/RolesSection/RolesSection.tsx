@@ -89,16 +89,16 @@ export const RolesSection = (): JSX.Element => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-16 w-full ">
           {roleCards.map((role) => (
-            <div key={role.id} className="relative bg-white rounded-[20px] md:rounded-[40px] shadow-shadow-soft">
-              <Card className="rounded-[20px] md:rounded-[40px] shadow-shadow-soft h-auto md:h-[568px] ">
-                <div className="relative pt-[100px] md:pt-[150px] pb-8 md:pb-[140px] px-4 md:px-[65px] ">
+            <div key={role.id} className="relative bg-white rounded-[20px] md:rounded-[40px] ">
+              <Card className="rounded-[20px] md:rounded-[40px]  h-full ">
+                <div className="relative pt-[100px] md:pt-[150px] pb-4 md:pb-[40px]  md:px-[65px] p-5 sm:p-0">
                   <img
                     className="absolute w-[150px] md:w-[207px] h-[150px] md:h-[207px] top-[-30px] md:top-[-58px] left-1/2 transform -translate-x-1/2"
                     alt={`${role.title} icon`}
                     src={role.image}
                   />
                   <CardContent className="p-0">
-                    <h3 className="w-full font-h4 text-xl md:text-[32px] text-dark text-center mb-[40px] md:mb-[40px]">
+                    <h3 className="w-full font-h4 text-xl md:text-[32px] text-dark text-center mb-[40px] md:mb-[40px] font-bold">
                       {role.title}
                     </h3>
                     <div className="opacity-80 font-t3 text-sm md:text-sm text-dark space-y-2">

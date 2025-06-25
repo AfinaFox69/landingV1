@@ -4,34 +4,41 @@ import { Card, CardContent } from "../../../../components/ui/card";
 import { HyperText } from "../../../../components/magicui/hyper-text";
 import { BlurFade } from "../../../../components/magicui/blur-fade";
 
-const goalsData = [
+type GoalType = {
+  id: number;
+  icon: string;
+  title: string;
+  description: string;
+};
+
+const goalsData: GoalType[] = [
   {
     id: 1,
     icon: "/group-5.svg",
     title: "Объединение",
     description:
-      "Перейти от подхода множественности личных кабинетов к единой учётной записи с ролевым распределением",
+      "Перейти от&nbsp;подхода множественности личных кабинетов к&nbsp;единой учётной записи с&nbsp;ролевым распределением",
   },
   {
     id: 2,
     icon: "/group-6.svg",
     title: "Новый стек",
     description:
-      "Перенести ИАС «Электронный университет» на новый технологический стек, с частичным сохранением баз данных на Oracle",
+      "Перенести ИАС &laquo;Электронный университет&raquo; на&nbsp;новый технологический стек, с&nbsp;частичным сохранением баз данных на&nbsp;Oracle",
   },
   {
     id: 3,
     icon: "/flameSvg.svg",
     title: "Новый дизайн",
     description:
-      "Разработать крутой дизайн, чтобы юзеры не грустили: сделать интерфейс удобным и интуитивно понятным на всех девайсах, браузерах и языках",
+      "Разработать крутой дизайн, чтобы юзеры не&nbsp;грустили: сделать интерфейс удобным и&nbsp;интуитивно понятным на&nbsp;всех девайсах, браузерах и&nbsp;языках",
   },
   {
     id: 4,
     icon: "/group-7.svg",
     title: "Цифровизация",
     description:
-      "Разработать новые HR-сервисы: трудоустройство, кадровый учёт, учёт рабочего времени и другие сервисы, которые упрощают взаимодействие HR с сотрудниками",
+      "Разработать новые HR-сервисы: трудоустройство, кадровый учёт, учёт рабочего времени и&nbsp;другие сервисы, которые упрощают взаимодействие&nbsp;HR с&nbsp;сотрудниками",
   },
 ];
 
@@ -51,7 +58,7 @@ export const GoalsSection = (): JSX.Element => {
             {goalsData.map((goal) => (
               <Card
                 key={goal.id}
-                className="w-full md:w-[328px] h-auto md:h-[448px] rounded-[50px] overflow-hidden shadow-light-shadow"
+                className="w-full md:w-[328px] h-auto md:h-[448px] rounded-[50px] border-dashed border-1 overflow-hidden shadow-light-shadow"
               >
                 <CardContent className="flex flex-col items-start gap-[5px] md:gap-[52px] p-10 md:p-[52px]">
                   <div className="relative w-[60px] h-[60px]">
@@ -69,9 +76,10 @@ export const GoalsSection = (): JSX.Element => {
                       {goal.title}
                     </h3>
 
-                    <p className="w-full opacity-80 font-t3 font-normal text-[#282828] text-sm md:text-base md:text-[16px] leading-[140%]">
-                      {goal.description}
-                    </p>
+                    <p 
+  className="w-full opacity-80 font-t3 font-normal text-[#282828] text-sm md:text-base md:text-[16px] leading-[140%]"
+  dangerouslySetInnerHTML={{ __html: goal.description }}
+/>
                   </div>
                 </CardContent>
               </Card>

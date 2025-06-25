@@ -146,7 +146,7 @@ export const FooterSection = (): JSX.Element => {
                       <a 
                         href={`mailto:${info.email}`}
                         style={{ fontFamily: 'PT Sans' }} 
-                        className="font-['PT Sans Caption Bold] font-normal  text-base md:text-xl leading-[30px] hover:text-bluebright transition-colors"
+                        className="font-['PT Sans Caption Bold] font-normal  text-base md:text-[18px] leading-[30px] hover:text-bluebright transition-colors"
                       >
                         {info.email}
                       </a>
@@ -159,7 +159,7 @@ export const FooterSection = (): JSX.Element => {
                       <a 
                         href={`tel:${info.phone}`}
                         style={{ fontFamily: 'PT Sans' }} 
-                        className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-base leading-[30px] hover:text-bluebright transition-colors"
+                        className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-[18px] leading-[30px] hover:text-bluebright transition-colors"
                       >
                         {info.phone}
                       </a>
@@ -167,12 +167,12 @@ export const FooterSection = (): JSX.Element => {
                       </p>
                     )}
                     {info.address && (
-                      <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
+                      <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-[18px] leading-[30px]">
                         {info.address}
                       </p>
                     )}
                     {info.hours && (
-                      <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
+                      <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-[18px] leading-[30px]">
                         {info.hours}
                       </p>
                     )}
