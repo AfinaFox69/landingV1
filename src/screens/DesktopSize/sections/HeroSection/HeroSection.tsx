@@ -3,10 +3,10 @@ import { BlurFade } from "../../../../components/magicui/blur-fade";
 
 export const HeroSection = (): JSX.Element => {
   return (
-    <section className="relative w-full h-[100vh] bg- flex items-end  bg-dark bg-[url(/Background.svg)] bg-[url(/blur-gradient-1.svg)] ">
-      <div className="md:container mx-auto md:px-4 h-full">
-        <div className="relative  w-full min-h-[60vh] h-full">
-          <div className="flex flex-col lg:flex-row  items-center justify-center  bg-cover bg-center bg-no-repeat h-full">
+    <section className="relative w-full h-[100vh]  flex items-end  bg-dark   bg-[url(/BackgroundFin.svg)]  ">
+      <div className="md:container mx-auto md:px-4 h-full ">
+        <div className="relative  w-full min-h-[60vh] h-full ">
+          <div className="flex flex-col lg:flex-row  items-center justify-center  bg-cover bg-center bg-no-repeat h-full ">
             {/* Left side - Text content */}
 
             <div className="sm:w-[20%]  flex flex-col items-start gap-8 lg:gap-[52px] py-20 lg:py-0 text-center lg:text-left  lg:w-[45%]">
@@ -33,7 +33,7 @@ export const HeroSection = (): JSX.Element => {
 
             {/* Right side - UI Cards */}
 
-            <div className=" sm:w-[80%] !h-full flex items-end">
+            <div className=" sm:w-[80%] !h-full flex items-end bg-[url(/blur-gradient-3.svg)] ">
               <BlurFade delay={1.5} className="">
                 <img src={"/imgInterfacePieces.png"} alt="UI Cards" className="w-full h-full " />
               </BlurFade>

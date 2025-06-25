@@ -165,7 +165,7 @@ export const FooterSection = (): JSX.Element => {
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-4 md:gap-4]">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-4 ">
               {legalLinks.map((link, index) => (
                 <a
                   key={index}
