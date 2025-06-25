@@ -25,7 +25,7 @@ export const HeroSection = (): JSX.Element => {
               </BlurFade>
 
               <BlurFade className="w-full" delay={0.5}>
-                 <a href="https://newlk.kpfu.ru">
+                 <a href="https://newlk.kpfu.ru/user">
                 <Button className="hover:bg-white hover:text-black w-[50%] md:w-full lg:w-64 px-[37px] py-[15px] bg-bluebright rounded-[30px] font-t3-bold text-white h-[42px]">
                   Начать работу
                 </Button>
