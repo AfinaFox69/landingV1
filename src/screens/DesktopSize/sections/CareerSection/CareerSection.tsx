@@ -32,10 +32,11 @@ export const CareerSection = (): JSX.Element => {
                     Подай заявку прямо сейчас и начни строить своё будущее!
                   </span>
                 </p>
-
+                <a href="https://forms.yandex.ru/cloud/67f360af90fa7b1417aaf8ef">
                 <Button className=" w-full md:w-auto rounded-[30px] bg-white text-bluedark hover:scale-[1.1] transition-all hover:bg-white  md:px-[37px] py-[25px] mt-[13px] h-[50px]  ">
                   <span className="font-t3-bold">Подать заявку</span>
                 </Button>
+                </a>
               </div>
             </div>
 
