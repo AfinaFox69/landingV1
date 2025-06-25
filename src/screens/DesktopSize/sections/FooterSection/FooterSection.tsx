@@ -142,12 +142,28 @@ export const FooterSection = (): JSX.Element => {
                   <div key={index} className="flex flex-col gap-3">
                     {info.email && (
                       <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
+                       {info.email && (
+                      <a 
+                        href={`mailto:${info.email}`}
+                        style={{ fontFamily: 'PT Sans' }} 
+                        className="font-['PT Sans Caption Bold] font-normal  text-base md:text-xl leading-[30px] hover:text-bluebright transition-colors"
+                      >
                         {info.email}
+                      </a>
+                    )}
                       </p>
                     )}
                     {info.phone && (
                       <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-base leading-[30px]">
+                        {info.phone && (
+                      <a 
+                        href={`tel:${info.phone}`}
+                        style={{ fontFamily: 'PT Sans' }} 
+                        className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-base leading-[30px] hover:text-bluebright transition-colors"
+                      >
                         {info.phone}
+                      </a>
+                    )}
                       </p>
                     )}
                     {info.address && (
