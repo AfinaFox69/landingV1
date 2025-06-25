@@ -3,6 +3,7 @@ import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 
 export const CareerSection = (): JSX.Element => {
+
   return (
     <section id="career" className="w-full py-[75px] md:pt-[130px]">
       <div className="container mx-auto px-4 md:px-6">
@@ -32,7 +33,7 @@ export const CareerSection = (): JSX.Element => {
                   </span>
                 </p>
 
-                <Button className=" w-full md:w-auto rounded-[30px] bg-white text-bluedark hover:bg-white/90  md:px-[37px] py-[25px] mt-[13px] h-[50px]">
+                <Button className=" w-full md:w-auto rounded-[30px] bg-white text-bluedark hover:scale-[1.1] transition-all hover:bg-white  md:px-[37px] py-[25px] mt-[13px] h-[50px]  ">
                   <span className="font-t3-bold">Подать заявку</span>
                 </Button>
               </div>
