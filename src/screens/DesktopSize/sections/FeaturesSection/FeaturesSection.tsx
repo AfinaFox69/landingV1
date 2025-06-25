@@ -306,7 +306,7 @@ export const FeaturesSection: React.FC = () => {
             Реализованные фичи
             </BlurFade>
         </h2>
-      <div id="features" className="max-w-7xl mx-auto px-4  pt-[13px] ">
+      <div id="features" className=" mx-auto container  pt-[13px] ">
         {/* Навигационные кнопки */}
         <div className="flex flex-wrap gap-2 mb-[38px] " style={{ fontFamily: 'PT Sans' }}>
           {slides.map((slide) => (
