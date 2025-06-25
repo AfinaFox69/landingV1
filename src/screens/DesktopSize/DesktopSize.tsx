@@ -15,7 +15,7 @@ import { StatisticsSection } from "./sections/StatisticsSection/StatisticsSectio
 import { X } from "lucide-react";
 import { Link } from "react-scroll";
 import { BlurFade } from "../../components/magicui/blur-fade";
-import vectorImage from '/vector-14.svg';
+
 
 export const DesktopSize = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -60,8 +60,10 @@ export const DesktopSize = (): JSX.Element => {
       }`}>
         <div className=" container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center ">
           <div className="flex items-center h-10">
-            <img className="h-full w-auto" alt="Vector" src={vectorImage} />
-            <div className="ml-3 h-[35px] w-[132px] bg-[url(/group-8.png)] bg-contain bg-no-repeat bg-center" />
+            <img className="h-full w-auto" alt="Vector" src='/VectorFNNN.svg' />
+            {/* <div className="ml-3 h-[35px] w-[132px] bg-[url(/group-8.png)] bg-contain bg-no-repeat bg-center" /> */}
+             <img className="h-full ml-[10px] w-auto" alt="123" src='/nadp.svg' />
+            
           </div>
 
           <button
