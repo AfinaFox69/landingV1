@@ -11,7 +11,7 @@ export const FooterSection = (): JSX.Element => {
 
   const legalLinks = [
     { text: "Политика конфиденциальности", width: "221px" },
-    { text: "Условия использования", width: "166px" },
+   
   ];
 
   return (
@@ -24,7 +24,7 @@ export const FooterSection = (): JSX.Element => {
             <div className="flex flex-col md:flex-row gap-8 md:gap-20">
               {/* First Logo */}
               <div className="relative w-[268px] h-[54px]">
-                <img
+                {/* <img
                   className="absolute w-[11px] h-[37px] top-4 left-[171px]"
                   alt="Vector"
                   src="/vector.svg"
@@ -85,14 +85,15 @@ export const FooterSection = (): JSX.Element => {
                   className="absolute w-[11px] h-[11px] top-px left-[171px]"
                   alt="Vector"
                   src="/vector-4.svg"
-                />
+                /> */}
+                <img src='logoDistricked.svg' alt='flameSvg' />
               </div>
 
               {/* Second Logo */}
-              <div className="relative w-[334.31px] h-[68px]">
-                <div className="absolute w-[233px] h-[63px] top-0.5 left-[102px]">
+              <div className=" hidden md:flex relative w-[334.31px] h-[68px]">
+                {/* <div className=" absolute w-[233px] h-[63px] top-0.5 left-[102px]">
                   <img
-                    className="absolute w-[152px] h-[49px] top-[7px] left-[81px]"
+                    className=" absolute w-[152px] h-[49px] top-[7px] left-[81px]"
                     alt="Group"
                     src="/group-1.png"
                   />
@@ -118,7 +119,8 @@ export const FooterSection = (): JSX.Element => {
                   className="absolute w-px h-[66px] top-px left-[79px]"
                   alt="Vector"
                   src="/vector-3.svg"
-                />
+                /> */}
+                <img src='logoDISKFU.svg' alt='flameSvg' />
               </div>
             </div>
 
@@ -131,7 +133,7 @@ export const FooterSection = (): JSX.Element => {
           {/* Right Column */}
           <div className="flex flex-col gap-8 md:gap-0 md:justify-between md:h-[267px]">
             <div className="flex flex-col gap-6 md:gap-[52px]">
-              <h4 className="font-h4 text-xl md:text-[32px] text-dark">
+              <h4 style={{ fontFamily: 'PT Sans' }} className="font-h4 text-xl md:text-[32px] text-dark font-bold">
                 Связаться с нами
               </h4>
 
@@ -139,22 +141,38 @@ export const FooterSection = (): JSX.Element => {
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex flex-col gap-3">
                     {info.email && (
-                      <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
+                      <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
+                       {info.email && (
+                      <a 
+                        href={`mailto:${info.email}`}
+                        style={{ fontFamily: 'PT Sans' }} 
+                        className="font-['PT Sans Caption Bold] font-normal  text-base md:text-[18px] leading-[30px] hover:text-bluebright transition-colors"
+                      >
                         {info.email}
+                      </a>
+                    )}
                       </p>
                     )}
                     {info.phone && (
-                      <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
+                      <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-base leading-[30px]">
+                        {info.phone && (
+                      <a 
+                        href={`tel:${info.phone}`}
+                        style={{ fontFamily: 'PT Sans' }} 
+                        className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-[18px] leading-[30px] hover:text-bluebright transition-colors"
+                      >
                         {info.phone}
+                      </a>
+                    )}
                       </p>
                     )}
                     {info.address && (
-                      <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
+                      <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-[18px] leading-[30px]">
                         {info.address}
                       </p>
                     )}
                     {info.hours && (
-                      <p className="font-['PT_Sans',Helvetica] font-normal text-[#56575c] text-base md:text-xl leading-[30px]">
+                      <p style={{ fontFamily: 'PT Sans' }} className="font-['PT Sans Caption Bold] font-normal text-[#56575c] text-base md:text-[18px] leading-[30px]">
                         {info.hours}
                       </p>
                     )}
@@ -163,16 +181,17 @@ export const FooterSection = (): JSX.Element => {
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-4 md:gap-[74px]">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-4 ">
               {legalLinks.map((link, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href="https://kpfu.ru/portal/docs/F722252292/pd_policy.pdf"
                   className="font-t3 text-gray text-sm md:text-base hover:text-bluebright transition-colors"
                 >
                   {link.text}
                 </a>
               ))}
+              {/* <div  className="ml-[2%] font-t3 text-gray text-sm md:text-base hover:text-bluebright transition-colors">Условия использования</div> */}
             </div>
           </div>
         </div>

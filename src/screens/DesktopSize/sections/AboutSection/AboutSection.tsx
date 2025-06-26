@@ -1,46 +1,39 @@
 import React from "react";
+import { HyperText } from "../../../../components/magicui/hyper-text";
+import { BlurFade } from "../../../../components/magicui/blur-fade";
 
 export const AboutSection = (): JSX.Element => {
   return (
-    <section className="flex justify-center py-10 md:py-20 w-full px-4 md:px-6">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-16 max-w-7xl">
-        <div className="w-full md:w-1/2 flex justify-center">
-          <div className="relative">
-            {/* Light blue circular background */}
-            <div className="hidden md:block w-[448px] h-[448px] bg-bluelight rounded-full transform translate-y-[89px] translate-x-[65px]" />
-
-            {/* Brain image */}
+    <BlurFade delay={0.5} inView>
+      <section
+        id="about"
+        className="flex justify-center mt-14 py-12 md:py-20  w-full px-4 md:px-6 ">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-16 max-w-7xl">
+          <div className="w-full md:w-1/2 flex justify-center">
             <img
-              className="w-[200px] md:w-[307px] h-auto md:h-[308px] transform md:translate-y-12 md:translate-x-[425px]"
+              className=""
               alt="Brain illustration"
-              src="/imgbrain.png"
-            />
-
-            {/* Person image */}
-            <img
-              className="w-full max-w-[350px] md:max-w-[578px] h-auto"
-              alt="Person illustration"
-              src="/imgchel.png"
+              src="/imgAvatarDIS.png"
             />
           </div>
-        </div>
 
-        <div className="flex flex-col items-start gap-6 md:gap-10 w-full md:w-2/5">
-          <h2 className="font-h3 text-dark text-3xl md:text-[42px] font-bold leading-[140%] text-center md:text-left w-full">
-            О нас
-          </h2>
+          <div className="flex flex-col items-start gap-6 md:gap-10 w-full md:w-2/5">
+            <h2 className="font-h3 text-dark text-3xl md:text-[42px] font-bold leading-[140%] text-center md:text-left w-full">
+              <BlurFade delay={0.5} inView>
+                О нас
+              </BlurFade>
+            </h2>
 
-          <p className="font-t2 text-dark text-lg md:text-[20px] leading-[150%] text-center md:text-left">
-            Департамент информатизации и связи — это мозг КФУ в плане
-            технологий.
-            <br className="hidden md:block" />
-            Эти ребята следят за тем, чтобы у всех был интернет, компы не
-            тупили, и вообще все IT-штуки работали на полную катушку. Они шарят,
-            как новые технологии могут помочь учиться и создавать классные
-            проекты.
-          </p>
+            <p className="font-t2 text-dark text-lg md:text-[20px] leading-[150%] text-center md:text-left ">
+              Департамент информатизации и&nbsp;связи&nbsp;&mdash; это мозг КФУ
+              в&nbsp;плане технологий. Эти ребята следят за&nbsp;тем, чтобы
+              у&nbsp;всех был интернет, компы не тупили, и&nbsp;вообще все
+              IT-штуки работали на&nbsp;полную катушку. Они шарят, как новые
+              технологии могут помочь учиться и&nbsp;создавать классные проекты.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </BlurFade>
   );
 };
